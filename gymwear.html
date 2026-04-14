@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gymwear Manufacturing — UPNS Apparel Bangladesh</title>
+  <meta name="description" content="Premium gymwear manufacturing from Bangladesh. Leggings, sports bras, gym sets. 4-way stretch fabrics, low MOQ from 300 pcs, 0% import duty to UK & EU."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --navy-mid: #132B52;
+      --navy-light: #1C3D6B;
+      --gold: #C9A84C;
+      --gold-light: #E2C87A;
+      --white: #FFFFFF;
+      --off-white: #F4F6F9;
+      --gray-500: #7A8594;
+      --gray-300: #BCC3CC;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 12px;
+      --transition: .28s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--navy); background: var(--white); line-height: 1.65; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 68px; padding: 0 6%;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(11,31,58,.94); backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .nav-brand { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--white); }
+    .nav-brand span { color: var(--gold); font-size: .65rem; display: block; letter-spacing: .18em; text-transform: uppercase; font-family: var(--font-body); font-weight: 500; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,.75); font-size: .85rem; font-weight: 500; transition: color var(--transition); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--navy); padding: 9px 20px; border-radius: 6px; font-size: .85rem; font-weight: 600; transition: var(--transition); }
+    .nav-cta:hover { background: var(--gold-light); }
+    @media(max-width:768px) { .nav-links { display: none; } }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; padding-top: 68px;
+      background: var(--navy);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 100% 50%, rgba(201,168,76,.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at 0% 30%, rgba(28,61,107,.6) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    /* Diagonal accent line */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 25%;
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(201,168,76,.15), transparent);
+    }
+    .hero-inner {
+      width: min(1200px, 90%); margin-inline: auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+      position: relative; z-index: 1;
+      padding-block: 80px;
+    }
+    .hero-niche-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.3);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px; width: fit-content;
+    }
+    .hero-niche-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 700; line-height: 1.08;
+      color: var(--white); margin-bottom: 20px;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 1rem; color: rgba(255,255,255,.65); line-height: 1.75; max-width: 460px; margin-bottom: 36px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+    .btn-primary { background: var(--gold); color: var(--navy); padding: 13px 26px; border-radius: 6px; font-weight: 600; font-size: .9rem; font-family: var(--font-body); border: none; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 7px; }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: rgba(255,255,255,.8); border: 1.5px solid rgba(255,255,255,.25); padding: 13px 26px; border-radius: 6px; font-weight: 500; font-size: .9rem; font-family: var(--font-body); cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 7px; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Fabric pills */
+    .fabric-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 100px; padding: 6px 14px;
+      font-size: .78rem; font-weight: 500; color: rgba(255,255,255,.7);
+    }
+    .pill.gold { background: rgba(201,168,76,.12); border-color: rgba(201,168,76,.3); color: var(--gold); }
+
+    /* Hero visual side */
+    .hero-visual { display: flex; flex-direction: column; gap: 16px; }
+    .hero-card-main {
+      background: var(--navy-mid); border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius); padding: 32px;
+      position: relative; overflow: hidden;
+    }
+    .hero-card-main::before {
+      content: '💪';
+      position: absolute; right: 24px; top: 24px;
+      font-size: 3rem; opacity: .15;
+    }
+    .card-label { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .card-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .card-desc { font-size: .85rem; color: rgba(255,255,255,.5); line-height: 1.6; }
+    .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .stat-box {
+      background: var(--navy-mid); border: 1px solid rgba(255,255,255,.07);
+      border-radius: 8px; padding: 18px 14px; text-align: center;
+    }
+    .stat-num { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: .7rem; font-weight: 500; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .08em; margin-top: 4px; }
+
+    /* PRODUCTS SECTION */
+    .section { padding-block: 88px; }
+    .section--alt { background: var(--off-white); }
+    .container { width: min(1200px, 90%); margin-inline: auto; }
+    .sec-tag { font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 10px; }
+    h2 { font-family: var(--font-display); font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 600; line-height: 1.15; margin-bottom: 14px; }
+    .divider { width: 40px; height: 3px; background: var(--gold); border-radius: 2px; margin-block: 18px; }
+    .sec-sub { font-size: 1rem; color: var(--gray-500); max-width: 560px; line-height: 1.75; }
+
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 24px; margin-top: 48px; }
+    .prod-card {
+      background: var(--white); border: 1px solid #EAEDf1;
+      border-radius: var(--radius); overflow: hidden;
+      transition: var(--transition);
+      box-shadow: 0 2px 12px rgba(11,31,58,.07);
+    }
+    .prod-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(11,31,58,.12); }
+    .prod-img {
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; position: relative;
+    }
+    .prod-img-label {
+      position: absolute; bottom: 10px; left: 12px;
+      background: rgba(11,31,58,.7); color: rgba(255,255,255,.7);
+      font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      padding: 4px 8px; border-radius: 4px;
+    }
+    .prod-info { padding: 20px 22px 24px; }
+    .prod-cat { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+    .prod-name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .prod-desc { font-size: .84rem; color: var(--gray-500); line-height: 1.6; margin-bottom: 14px; }
+    .prod-specs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .spec-tag { background: rgba(11,31,58,.06); border-radius: 4px; padding: 4px 10px; font-size: .72rem; font-weight: 600; color: var(--navy); }
+    .btn-quote { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); border-radius: 6px; padding: 9px 18px; font-size: .82rem; font-weight: 600; font-family: var(--font-body); cursor: pointer; transition: var(--transition); }
+    .btn-quote:hover { background: var(--navy); color: var(--white); }
+
+    /* FABRICS */
+    .fabrics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 20px; margin-top: 48px; }
+    .fabric-card {
+      background: var(--white); border: 1px solid #EAEDf1;
+      border-radius: var(--radius); padding: 28px 24px;
+      transition: var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .fabric-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform var(--transition); }
+    .fabric-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(11,31,58,.1); }
+    .fabric-card:hover::after { transform: scaleX(1); }
+    .fabric-icon { font-size: 2rem; margin-bottom: 14px; }
+    .fabric-name { font-weight: 700; font-size: .95rem; color: var(--navy); margin-bottom: 6px; }
+    .fabric-composition { font-size: .8rem; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+    .fabric-desc { font-size: .82rem; color: var(--gray-500); line-height: 1.55; }
+
+    /* WHY BD */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .why-list { display: flex; flex-direction: column; gap: 20px; margin-top: 32px; }
+    .why-item { display: flex; gap: 14px; align-items: flex-start; }
+    .why-icon { width: 42px; height: 42px; background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .why-title { font-weight: 600; font-size: .95rem; margin-bottom: 3px; }
+    .why-desc { font-size: .84rem; color: var(--gray-500); line-height: 1.55; }
+    .advantage-box {
+      background: var(--navy); border-radius: var(--radius);
+      padding: 40px 36px; color: var(--white);
+    }
+    .adv-stat { margin-bottom: 28px; }
+    .adv-num { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .adv-label { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 4px; letter-spacing: .06em; }
+    .adv-divider { width: 40px; height: 1px; background: rgba(255,255,255,.1); margin-block: 20px; }
+
+    /* CTA */
+    .cta-section {
+      background: var(--navy); padding-block: 88px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,.08) 0%, transparent 70%);
+    }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-section h2 { color: var(--white); }
+    .cta-section .sec-sub { color: rgba(255,255,255,.55); margin-inline: auto; text-align: center; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+
+    /* CONTACT FORM */
+    .contact-section { background: var(--navy); padding-block: 88px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: start; }
+    .contact-detail { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
+    .contact-icon { width: 42px; height: 42px; background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .c-label { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .c-val { font-size: .9rem; color: rgba(255,255,255,.8); font-weight: 500; }
+    .form-box { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 36px 40px; }
+    .form-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .form-sub { font-size: .83rem; color: rgba(255,255,255,.4); margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .fg { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+    .fg label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+    .fg input, .fg select, .fg textarea {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 6px; padding: 11px 14px;
+      font-family: var(--font-body); font-size: .88rem; color: var(--white);
+      outline: none; transition: border-color var(--transition); width: 100%;
+    }
+    .fg input::placeholder, .fg textarea::placeholder { color: rgba(255,255,255,.22); }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--gold); }
+    .fg select option { background: var(--navy); }
+    .fg textarea { min-height: 100px; resize: vertical; }
+    .btn-submit { width: 100%; background: var(--gold); color: var(--navy); border: none; border-radius: 6px; padding: 14px; font-family: var(--font-body); font-size: .95rem; font-weight: 700; cursor: pointer; transition: var(--transition); margin-top: 4px; }
+    .btn-submit:hover { background: var(--gold-light); }
+
+    /* FOOTER */
+    footer { background: #070F1E; padding-block: 32px; text-align: center; }
+    .footer-brand { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: .78rem; color: rgba(255,255,255,.2); }
+
+    @media(max-width:1024px) { .hero-inner { grid-template-columns: 1fr; } .why-grid { grid-template-columns: 1fr; } .contact-grid { grid-template-columns: 1fr; } }
+    @media(max-width:768px) { .form-row { grid-template-columns: 1fr; } .stats-row { grid-template-columns: 1fr 1fr; } .form-box { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      UPNS Apparel
+      <span>Bangladesh Garment Sourcing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sportswear.html">Sportswear</a></li>
+      <li><a href="athleisure.html">Athleisure</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-primary nav-cta">Request Quote</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-niche-tag">Gymwear Specialist</div>
+        <h1>Premium <em>Gymwear</em><br>Manufacturing<br>from Bangladesh</h1>
+        <p class="hero-sub">Leggings, sports bras, gym sets, and compression wear — manufactured in Dhaka with 4-way stretch performance fabrics. Low MOQ. 0% import duty to UK & EU.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">📋 Request a Quote</a>
+          <a href="#products" class="btn-ghost">View Products</a>
+        </div>
+        <div class="fabric-pills">
+          <span class="pill gold">4-Way Stretch</span>
+          <span class="pill">80% Poly / 20% Spandex</span>
+          <span class="pill">MOQ from 300 pcs</span>
+          <span class="pill">0% Duty · UK & EU</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <div class="card-label">Our Gymwear Speciality</div>
+          <div class="card-title">Performance Fabrics,<br>Competitive Pricing</div>
+          <div class="card-desc">We source exclusively from factories in Dhaka and Narayanganj specialising in performance activewear. Your brand. Our expertise.</div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-num">0%</div>
+            <div class="stat-label">Duty · UK & EU</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">300</div>
+            <div class="stat-label">Min. Order Pcs</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">45d</div>
+            <div class="stat-label">Lead Time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="container">
+      <div>
+        <span class="sec-tag">Product Range</span>
+        <h2>Gymwear We Manufacture</h2>
+        <div class="divider"></div>
+        <p class="sec-sub">All products available in custom colours, sizes XS–3XL, with private label and custom packaging.</p>
+      </div>
+      <div class="products-grid">
+        <div class="prod-card">
+          <div class="prod-img" style="background:linear-gradient(135deg,#1a2a3a,#2d4a6a);">
+            💪
+            <div class="prod-img-label">Add your photo</div>
+          </div>
+          <div class="prod-info">
+            <div class="prod-cat">Best Seller</div>
+            <div class="prod-name">High-Waist Leggings</div>
+            <p class="prod-desc">4-way stretch, moisture-wicking, squat-proof. The core product for any gymwear brand.</p>
+            <div class="prod-specs">
+              <span class="spec-tag">80% Poly 20% Spandex</span>
+              <span class="spec-tag">200–250 GSM</span>
+              <span class="spec-tag">4-Way Stretch</span>
+            </div>
+            <a href="#contact"><button class="btn-quote">Request Quote</button></a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background:linear-gradient(135deg,#2a1a2a,#4a2a4a);">
+            🩱
+            <div class="prod-img-label">Add your photo</div>
+          </div>
+          <div class="prod-info">
+            <div class="prod-cat">High Demand</div>
+            <div class="prod-name">Sports Bras</div>
+            <p class="prod-desc">Low, medium, and high-impact options. Racerback, longline, and crop styles available.</p>
+            <div class="prod-specs">
+              <span class="spec-tag">Nylon / Spandex</span>
+              <span class="spec-tag">Removable Padding</span>
+              <span class="spec-tag">Custom Straps</span>
+            </div>
+            <a href="#contact"><button class="btn-quote">Request Quote</button></a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background:linear-gradient(135deg,#1a2a1a,#2a4a2a);">
+            🩳
+            <div class="prod-img-label">Add your photo</div>
+          </div>
+          <div class="prod-info">
+            <div class="prod-cat">Trending 2026</div>
+            <div class="prod-name">Gym Shorts</div>
+            <p class="prod-desc">Biker shorts, training shorts, and 2-in-1 compression styles. Moisture-wicking performance fabrics.</p>
+            <div class="prod-specs">
+              <span class="spec-tag">Polyester Blend</span>
+              <span class="spec-tag">Inner Liner Option</span>
+              <span class="spec-tag">Custom Length</span>
+            </div>
+            <a href="#contact"><button class="btn-quote">Request Quote</button></a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background:linear-gradient(135deg,#2a2a1a,#4a3a1a);">
+            🏋️
+            <div class="prod-img-label">Add your photo</div>
+          </div>
+          <div class="prod-info">
+            <div class="prod-cat">Complete Set</div>
+            <div class="prod-name">Seamless Gym Sets</div>
+            <p class="prod-desc">Matching legging + sports bra sets. Seamless knit construction — premium feel, no seam irritation.</p>
+            <div class="prod-specs">
+              <span class="spec-tag">Seamless Knit</span>
+              <span class="spec-tag">Ribbed Texture</span>
+              <span class="spec-tag">Set or Separates</span>
+            </div>
+            <a href="#contact"><button class="btn-quote">Request Quote</button></a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background:linear-gradient(135deg,#1a1a2a,#2a2a4a);">
+            👕
+            <div class="prod-img-label">Add your photo</div>
+          </div>
+          <div class="prod-info">
+            <div class="prod-cat">Essential</div>
+            <div class="prod-name">Training Tops & Tanks</div>
+            <p class="prod-desc">Muscle tanks, crop tops, and training tees. Moisture-wicking performance or soft cotton-blend options.</p>
+            <div class="prod-specs">
+              <span class="spec-tag">Polyester Jersey</span>
+              <span class="spec-tag">Cotton Blend</span>
+              <span class="spec-tag">Cropped / Full</span>
+            </div>
+            <a href="#contact"><button class="btn-quote">Request Quote</button></a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background:linear-gradient(135deg,#2a1a1a,#4a2a2a);">
+            🧘
+            <div class="prod-img-label">Add your photo</div>
+          </div>
+          <div class="prod-info">
+            <div class="prod-cat">Yoga & Studio</div>
+            <div class="prod-name">Yoga & Studio Wear</div>
+            <p class="prod-desc">Ultra-soft yoga pants, flow shorts, and studio tops. Buttery smooth fabrics with four-way stretch.</p>
+            <div class="prod-specs">
+              <span class="spec-tag">Nylon Blend</span>
+              <span class="spec-tag">Buttery Soft</span>
+              <span class="spec-tag">High Waistband</span>
+            </div>
+            <a href="#contact"><button class="btn-quote">Request Quote</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FABRICS -->
+  <section class="section section--alt" id="fabrics">
+    <div class="container">
+      <span class="sec-tag">Fabric Knowledge</span>
+      <h2>Fabrics We Work With</h2>
+      <div class="divider"></div>
+      <p class="sec-sub">Every fabric we source is tested for stretch, recovery, moisture management, and colourfastness before bulk production.</p>
+      <div class="fabrics-grid">
+        <div class="fabric-card">
+          <div class="fabric-icon">🥇</div>
+          <div class="fabric-name">Performance Spandex Blend</div>
+          <div class="fabric-composition">80% Polyester + 20% Spandex</div>
+          <div class="fabric-desc">Industry standard for leggings and sports bras. 4-way stretch, moisture-wicking, durable. Used by every major gymwear brand globally.</div>
+        </div>
+        <div class="fabric-card">
+          <div class="fabric-icon">✨</div>
+          <div class="fabric-name">Nylon Spandex Premium</div>
+          <div class="fabric-composition">78% Nylon + 22% Spandex</div>
+          <div class="fabric-desc">Softer, more premium feel than polyester. Used by high-end brands like Lululemon. Higher price point — higher perceived value for your customers.</div>
+        </div>
+        <div class="fabric-card">
+          <div class="fabric-icon">🔄</div>
+          <div class="fabric-name">Seamless Knit</div>
+          <div class="fabric-composition">Polyester + Spandex blend</div>
+          <div class="fabric-desc">Knitted as one piece — no seams, no chafing. Used in premium seamless gym sets. Currently the fastest-growing product category in gymwear.</div>
+        </div>
+        <div class="fabric-card">
+          <div class="fabric-icon">🌿</div>
+          <div class="fabric-name">Recycled Performance</div>
+          <div class="fabric-composition">Recycled Polyester + Spandex</div>
+          <div class="fabric-desc">Made from recycled plastic bottles. OEKO-TEX certified. EU buyers increasingly demand sustainable options — we can source it.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BANGLADESH -->
+  <section class="section">
+    <div class="container">
+      <div class="why-grid">
+        <div>
+          <span class="sec-tag">Why Bangladesh</span>
+          <h2>Your Competitive Advantage Starts Here</h2>
+          <div class="divider"></div>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-icon">💰</div>
+              <div>
+                <div class="why-title">0% Import Duty to UK & EU</div>
+                <div class="why-desc">Bangladesh's EBA trade status means zero import duty on garments to UK and EU. Sourcing from China costs your buyers 12–20% duty. You offer a better deal instantly.</div>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon">🌍</div>
+              <div>
+                <div class="why-title">World's #2 Garment Exporter</div>
+                <div class="why-desc">Bangladesh exports over $40 billion in garments annually. The manufacturing expertise, infrastructure, and quality is world-class and proven.</div>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon">📦</div>
+              <div>
+                <div class="why-title">Low MOQ — From 300 Pieces</div>
+                <div class="why-desc">Most large Chinese factories won't touch under 1,000 pieces. Our partner factories work from 300 pcs per style — ideal for growing brands testing new products.</div>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon">⚡</div>
+              <div>
+                <div class="why-title">Direct Communication — 24h Response</div>
+                <div class="why-desc">No language barrier, no time zone chaos. You deal directly with us — every inquiry answered personally within 24 hours.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="advantage-box">
+          <div class="adv-stat">
+            <div class="adv-num">0%</div>
+            <div class="adv-label">Import duty to UK & EU from Bangladesh</div>
+          </div>
+          <div class="adv-divider"></div>
+          <div class="adv-stat">
+            <div class="adv-num">#2</div>
+            <div class="adv-label">World's largest garment exporter</div>
+          </div>
+          <div class="adv-divider"></div>
+          <div class="adv-stat">
+            <div class="adv-num">300</div>
+            <div class="adv-label">Minimum order quantity per style</div>
+          </div>
+          <div class="adv-divider"></div>
+          <div class="adv-stat">
+            <div class="adv-num">24h</div>
+            <div class="adv-label">Guaranteed response to every inquiry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div style="margin-bottom:48px;">
+        <span class="sec-tag" style="color:var(--gold);">Get In Touch</span>
+        <h2 style="color:var(--white);">Request Your Gymwear Quote</h2>
+        <div class="divider"></div>
+        <p class="sec-sub" style="color:rgba(255,255,255,.5);">Tell us what you need and we'll respond within 24 hours with factory pricing, MOQ, and lead time.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div><div class="c-label">Location</div><div class="c-val">UPNS Apparel, Dhaka, Bangladesh</div></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📧</div>
+            <div><div class="c-label">Email</div><div class="c-val">sourcing.upnsapparel@gmail.com</div></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">💬</div>
+            <div><div class="c-label">WhatsApp</div><div class="c-val">Message us directly</div></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">🕐</div>
+            <div><div class="c-label">Response Time</div><div class="c-val">Within 24 hours — guaranteed</div></div>
+          </div>
+        </div>
+        <div class="form-box">
+          <div class="form-title">Gymwear Quote Request</div>
+          <div class="form-sub">We'll come back with pricing, MOQ and lead time within 24 hours.</div>
+          <div class="form-row">
+            <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your name" required></div>
+            <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="you@brand.com" required></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Brand / Company</label><input type="text" name="company" placeholder="Your brand name"></div>
+            <div class="fg"><label>Country</label><input type="text" name="country" placeholder="e.g. United Kingdom"></div>
+          </div>
+          <div class="fg">
+            <label>Product *</label>
+            <select name="product">
+              <option value="">Select gymwear product</option>
+              <option>High-Waist Leggings</option>
+              <option>Sports Bras</option>
+              <option>Gym Shorts</option>
+              <option>Seamless Gym Sets</option>
+              <option>Training Tops & Tanks</option>
+              <option>Yoga & Studio Wear</option>
+              <option>Full Gymwear Collection</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message / Requirements</label><textarea name="message" placeholder="Quantity, reference designs, target price, delivery timeline..."></textarea></div>
+          <button class="btn-submit" onclick="handleSubmit(this)">📋 Send Gymwear Inquiry</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">UPNS Apparel</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="gymwear.html">Gymwear</a>
+      <a href="sportswear.html">Sportswear</a>
+      <a href="athleisure.html">Athleisure</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2025 UPNS Apparel. Bangladesh Garment Sourcing & Buying House.</div>
+  </footer>
+
+  <script>
+    async function handleSubmit(btn) {
+      const name = document.querySelector('input[name="name"]').value.trim();
+      const email = document.querySelector('input[name="email"]').value.trim();
+      const company = document.querySelector('input[name="company"]').value.trim();
+      const country = document.querySelector('input[name="country"]').value.trim();
+      const product = document.querySelector('select[name="product"]').value;
+      const message = document.querySelector('textarea[name="message"]').value.trim();
+      if (!name || !email) { alert('Please fill in your name and email.'); return; }
+      btn.textContent = '⏳ Sending...'; btn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/mreowano', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, company, country, product, message, page: 'Gymwear' })
+        });
+        if (res.ok) {
+          btn.textContent = '✅ Inquiry Sent!';
+          btn.style.background = '#2ecc71';
+        } else { throw new Error(); }
+      } catch { btn.textContent = '❌ Failed — Try Again'; btn.disabled = false; }
+    }
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(11,31,58,.3)' : 'none';
+    });
+  </script>
+</body>
+</html>
