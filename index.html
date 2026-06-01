@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>UPNS Apparel — Premium B2B Gymwear &amp; Activewear Garment Sourcing from Bangladesh</title>
+<title>UPNS Apparel | Garment Sourcing from Bangladesh</title>
 <meta name="description" content="UPNS Apparel — Premium B2B garment sourcing from Bangladesh. Gymwear, sportswear, athleisure, hoodies and activewear. Certified factories, low MOQ, fast delivery worldwide.">
 <meta name="keywords" content="UPNS Apparel, garment sourcing Bangladesh, B2B gymwear, sportswear supplier, athleisure wholesale, activewear manufacturer, hoodies Bangladesh, custom clothing Bangladesh">
 <meta name="robots" content="index, follow">
+<meta property="og:title" content="UPNS Apparel | Garment Sourcing from Bangladesh">
+<meta property="og:description" content="UPNS Apparel — B2B garment sourcing company in Bangladesh. Gymwear, sportswear, athleisure, hoodies. Certified factories, competitive pricing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://upnsapparel.github.io/upns-apparel/">
+<meta name="author" content="UPNS Apparel">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,7 +125,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .csw-label{font-size:.58rem;color:rgba(255,255,255,.5);text-align:center;line-height:1.35;font-weight:500}
 .csw-label span{display:block;font-size:.54rem;color:rgba(255,255,255,.3);letter-spacing:.04em;font-family:monospace}
 .embroid-desc{font-size:.71rem;color:var(--gray-500);line-height:1.5;margin-top:6px}
-.embroid-card{align-items:flex-start;text-align:left;padding:18px 16px}
+.embroid-card{align-items:flex-start;text-align:left}
 .embroid-icon{display:block;font-size:1.6rem;margin-bottom:5px}
 .sampling-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
 .sampling-steps::before{content:'';position:absolute;top:32px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,168,76,.2))}
@@ -222,19 +227,19 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .ppos-card:hover{background:rgba(255,255,255,.07);border-color:rgba(201,168,76,.3);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
 .ppos-card:hover::before{opacity:1}
 .ppos-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
-.ppos-icon{width:38px;height:38px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ppos-icon svg{width:18px;height:18px;stroke:var(--gold);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .ppos-badge{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(201,168,76,.12);color:var(--gold);padding:3px 8px;border-radius:100px;white-space:nowrap}
 .ppos-num{font-size:.6rem;font-weight:700;color:rgba(255,255,255,.3);letter-spacing:.1em}
 .ppos-name{font-size:.88rem;font-weight:700;color:var(--white);line-height:1.3}
 .ppos-hint{font-size:.72rem;color:rgba(255,255,255,.4);line-height:1.45}
 /* EMBROIDERY */
 .embroid-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-.embroid-card{background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:18px 12px;text-align:center;box-shadow:var(--shadow-sm);transition:var(--transition)}
-.embroid-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(201,168,76,.3)}
-.embroid-icon{font-size:1.9rem;margin-bottom:8px;display:block}
-.embroid-num{font-size:.6rem;font-weight:700;letter-spacing:.1em;color:var(--gold);margin-bottom:4px;text-transform:uppercase}
-.embroid-name{font-size:.74rem;font-weight:600;color:var(--navy);line-height:1.3}
+.embroid-card{background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:20px 16px;box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;gap:6px;position:relative;overflow:hidden}
+.embroid-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform var(--transition)}
+.embroid-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(201,168,76,.25)}
+.embroid-card:hover::after{transform:scaleX(1)}
+.embroid-num{font-size:.58rem;font-weight:700;letter-spacing:.1em;color:var(--gray-300);text-transform:uppercase}
+.embroid-name{font-weight:700;font-size:.86rem;color:var(--navy);line-height:1.25}
+.embroid-desc{font-size:.7rem;color:var(--gray-500);line-height:1.55}
 /* SIZE CHARTS */
 .sz-tabs{display:flex;gap:0;border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-sm);overflow:hidden;width:fit-content;margin:0 auto 28px}
 .sz-tab{padding:10px 28px;font-size:.84rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,.6);transition:var(--transition);border-right:1px solid rgba(255,255,255,.1)}
@@ -623,62 +628,62 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div class="ppos-panel active" id="ppos-tshirt">
       <div class="ppos-grid">
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="8" y="7" width="8" height="6" rx="1"/><path d="M12 7v6"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 01</div><div class="ppos-name">Front Chest Centre</div></div>
           <div class="ppos-hint">Most popular placement. Logo centred on chest — ideal for brand mark or text lockup.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="6" height="5" rx="1"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 02</div><div class="ppos-name">Front Chest Left</div></div>
           <div class="ppos-hint">Small logo or badge on left chest — clean and professional, suits corporate and sport brands.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="13" y="7" width="6" height="5" rx="1"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 03</div><div class="ppos-name">Front Chest Right</div></div>
           <div class="ppos-hint">Right chest placement for secondary branding, sponsor logos, or co-branding elements.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="1"/><path d="M8 9h8M8 12h5"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 04</div><div class="ppos-name">Full Front Print</div></div>
           <div class="ppos-hint">Large-scale graphic or artwork covering the full front panel — bold statement for lifestyle brands.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="8" y="5" width="8" height="5" rx="1"/><path d="M12 5v5"/></svg></div><span class="ppos-badge">Back</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Back</span></div>
           <div><div class="ppos-num">POSITION 05</div><div class="ppos-name">Upper Back Centre</div></div>
           <div class="ppos-hint">Logo or text across the upper back yoke — visible from a distance, popular in streetwear and teamwear.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1"/><path d="M7 10h10M7 14h7"/></svg></div><span class="ppos-badge">Back</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Back</span></div>
           <div><div class="ppos-num">POSITION 06</div><div class="ppos-name">Full Back Print</div></div>
           <div class="ppos-hint">Full artwork or oversized graphic on the back panel — maximises impact for graphic tees and jerseys.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M5 5v14M5 12h6"/><rect x="5" y="8" width="5" height="8" rx="1"/></svg></div><span class="ppos-badge">Sleeve</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Sleeve</span></div>
           <div><div class="ppos-num">POSITION 07</div><div class="ppos-name">Left Sleeve</div></div>
           <div class="ppos-hint">Brand name or logo running down the left sleeve — a standout detail for athletic and premium basics.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M19 5v14M19 12h-6"/><rect x="14" y="8" width="5" height="8" rx="1"/></svg></div><span class="ppos-badge">Sleeve</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Sleeve</span></div>
           <div><div class="ppos-num">POSITION 08</div><div class="ppos-name">Right Sleeve</div></div>
           <div class="ppos-hint">Secondary branding or sponsor text on the right sleeve — pairs well with a left sleeve logo.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M8 6c0-1.1.9-2 2-2h4a2 2 0 012 2"/><path d="M6 6h12"/></svg></div><span class="ppos-badge">Detail</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Detail</span></div>
           <div><div class="ppos-num">POSITION 09</div><div class="ppos-name">Collar / Neckline</div></div>
           <div class="ppos-hint">Small branding at the collar or neckline — subtle but high-impact detail for premium garment presentation.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M4 19h16M8 19v-3h8v3"/></svg></div><span class="ppos-badge">Detail</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Detail</span></div>
           <div><div class="ppos-num">POSITION 10</div><div class="ppos-name">Hem Label</div></div>
           <div class="ppos-hint">Woven or printed label stitched at the hem — brand identity detail visible when garment is worn or hung.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><path d="M9 5H6a1 1 0 00-1 1v13h14V6a1 1 0 00-1-1h-3"/></svg></div><span class="ppos-badge">Detail</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Detail</span></div>
           <div><div class="ppos-num">POSITION 11</div><div class="ppos-name">Inside Label</div></div>
           <div class="ppos-hint">Interior care and brand label — heat transfer or woven, tagless and soft against skin. Standard for all garments.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><span class="ppos-badge">All-Over</span></div>
+          <div class="ppos-top"><span class="ppos-badge">All-Over</span></div>
           <div><div class="ppos-num">POSITION 12</div><div class="ppos-name">All-Over Print</div></div>
           <div class="ppos-hint">Full garment sublimation — seamless pattern or artwork covering every panel. Best on polyester fabrics.</div>
         </div>
@@ -688,62 +693,62 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div class="ppos-panel" id="ppos-hoodie">
       <div class="ppos-grid">
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="8" height="6" rx="1"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 01</div><div class="ppos-name">Chest Centre</div></div>
           <div class="ppos-hint">Primary logo placement centred on the chest — works for all hoodie styles, from pullover to zip-up.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="5" height="4" rx="1"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 02</div><div class="ppos-name">Chest Left Pocket</div></div>
           <div class="ppos-hint">Small brand mark above or on the left chest pocket — popular for clean, minimal brand presentations.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1"/><path d="M7 10h10"/></svg></div><span class="ppos-badge">Back</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Back</span></div>
           <div><div class="ppos-num">POSITION 03</div><div class="ppos-name">Full Back Large</div></div>
           <div class="ppos-hint">Oversized back print with graphic, slogan, or large logo — the statement piece of any hoodie design.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M6 4c0 4 2 6 6 6s6-2 6-6"/></svg></div><span class="ppos-badge">Hood</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Hood</span></div>
           <div><div class="ppos-num">POSITION 04</div><div class="ppos-name">Hood Top</div></div>
           <div class="ppos-hint">Logo or pattern printed on the hood exterior — unique detail visible when hood is worn up or laid flat.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M5 5v14M5 12h5"/><rect x="5" y="8" width="4" height="8" rx="1"/></svg></div><span class="ppos-badge">Sleeve</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Sleeve</span></div>
           <div><div class="ppos-num">POSITION 05</div><div class="ppos-name">Left Sleeve</div></div>
           <div class="ppos-hint">Vertical brand name or logo strip down the left sleeve — signature detail for athletic and lifestyle hoodies.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M19 5v14M19 12h-5"/><rect x="15" y="8" width="4" height="8" rx="1"/></svg></div><span class="ppos-badge">Sleeve</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Sleeve</span></div>
           <div><div class="ppos-num">POSITION 06</div><div class="ppos-name">Right Sleeve</div></div>
           <div class="ppos-hint">Right sleeve branding — typically used for sponsor logos, collection number, or secondary brand text.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M7 17h10M7 17v-4h10v4"/><path d="M12 13v4"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 07</div><div class="ppos-name">Kangaroo Pocket</div></div>
           <div class="ppos-hint">Logo or artwork printed directly on the kangaroo pocket — eye-level branding that's highly visible when worn.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="8" y="17" width="8" height="3" rx="1"/></svg></div><span class="ppos-badge">Detail</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Detail</span></div>
           <div><div class="ppos-num">POSITION 08</div><div class="ppos-name">Cuff Label</div></div>
           <div class="ppos-hint">Woven or printed label at the cuff — a refined finishing touch that reinforces brand identity.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M6 4c0 4 2 6 6 6s6-2 6-6"/><path d="M10 8h4"/></svg></div><span class="ppos-badge">Hood</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Hood</span></div>
           <div><div class="ppos-num">POSITION 09</div><div class="ppos-name">Inside Hood</div></div>
           <div class="ppos-hint">Hidden interior hood print — a premium surprise detail appreciated in high-end and streetwear brands.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><path d="M9 5H6a1 1 0 00-1 1v13h14V6a1 1 0 00-1-1h-3"/></svg></div><span class="ppos-badge">Label</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Label</span></div>
           <div><div class="ppos-num">POSITION 10</div><div class="ppos-name">Woven Label</div></div>
           <div class="ppos-hint">Custom woven neck label with brand name, size, and care symbols — standard retail finish for all hoodies.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M4 19h16M8 19v-2h8v2"/></svg></div><span class="ppos-badge">Detail</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Detail</span></div>
           <div><div class="ppos-num">POSITION 11</div><div class="ppos-name">Hem Print</div></div>
           <div class="ppos-hint">Text or graphic along the bottom hem edge — subtle branding detail visible when garment is untucked or displayed.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><span class="ppos-badge">All-Over</span></div>
+          <div class="ppos-top"><span class="ppos-badge">All-Over</span></div>
           <div><div class="ppos-num">POSITION 12</div><div class="ppos-name">All-Over Sublimation</div></div>
           <div class="ppos-hint">Full garment dye-sublimation with seamless pattern — requires polyester fabric, delivers maximum visual impact.</div>
         </div>
@@ -753,62 +758,62 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div class="ppos-panel" id="ppos-bottom">
       <div class="ppos-grid">
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="6" height="14" rx="1"/><path d="M7 5v14"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 01</div><div class="ppos-name">Left Leg Front</div></div>
           <div class="ppos-hint">Logo or text down the left leg front — a signature placement for joggers, tracksuits, and athletic shorts.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="14" y="5" width="6" height="14" rx="1"/><path d="M17 5v14"/></svg></div><span class="ppos-badge">Front</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Front</span></div>
           <div><div class="ppos-num">POSITION 02</div><div class="ppos-name">Right Leg Front</div></div>
           <div class="ppos-hint">Right leg front branding — secondary placement used for sponsor text or collection number.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="6" height="14" rx="1"/></svg></div><span class="ppos-badge">Back</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Back</span></div>
           <div><div class="ppos-num">POSITION 03</div><div class="ppos-name">Left Leg Back</div></div>
           <div class="ppos-hint">Back of left leg — great for vertical text, stripe detailing, or a second brand element.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="4" rx="1"/></svg></div><span class="ppos-badge">Waistband</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Waistband</span></div>
           <div><div class="ppos-num">POSITION 04</div><div class="ppos-name">Back Waistband</div></div>
           <div class="ppos-hint">Logo or brand name printed on the back waistband exterior — highly visible detail when wearing cropped tops.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="4" rx="1"/><path d="M12 4v4"/></svg></div><span class="ppos-badge">Waistband</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Waistband</span></div>
           <div><div class="ppos-num">POSITION 05</div><div class="ppos-name">Front Waistband</div></div>
           <div class="ppos-hint">Brand name woven or printed into the front waistband — a premium detail visible during workouts.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="14" y="8" width="7" height="6" rx="1"/></svg></div><span class="ppos-badge">Back</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Back</span></div>
           <div><div class="ppos-num">POSITION 06</div><div class="ppos-name">Back Hip Pocket</div></div>
           <div class="ppos-hint">Small logo or embroidery on the back hip pocket — subtle brand detail popular in casual and athleisure styles.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="4" height="14" rx="1"/></svg></div><span class="ppos-badge">Side</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Side</span></div>
           <div><div class="ppos-num">POSITION 07</div><div class="ppos-name">Left Side Panel</div></div>
           <div class="ppos-hint">Vertical stripe or branding on the left side seam panel — commonly used in colour-block and panel designs.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="17" y="5" width="4" height="14" rx="1"/></svg></div><span class="ppos-badge">Side</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Side</span></div>
           <div><div class="ppos-num">POSITION 08</div><div class="ppos-name">Right Side Panel</div></div>
           <div class="ppos-hint">Right side panel branding or stripe — mirrors left side for symmetrical sportswear and team kit designs.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="4" rx="1"/><path d="M8 8v2M12 8v2M16 8v2"/></svg></div><span class="ppos-badge">Interior</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Interior</span></div>
           <div><div class="ppos-num">POSITION 09</div><div class="ppos-name">Inside Waistband</div></div>
           <div class="ppos-hint">Jacquard or printed brand name on the interior waistband — a luxury detail that elevates garment presentation.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><path d="M4 19h16M8 19v-2h8v2"/></svg></div><span class="ppos-badge">Detail</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Detail</span></div>
           <div><div class="ppos-num">POSITION 10</div><div class="ppos-name">Hem Label</div></div>
           <div class="ppos-hint">Woven or printed label at the hem of shorts or trouser leg — finishes the garment with a professional retail touch.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><path d="M9 5H6a1 1 0 00-1 1v13h14V6a1 1 0 00-1-1h-3"/></svg></div><span class="ppos-badge">Label</span></div>
+          <div class="ppos-top"><span class="ppos-badge">Label</span></div>
           <div><div class="ppos-num">POSITION 11</div><div class="ppos-name">Woven Label</div></div>
           <div class="ppos-hint">Custom woven interior label with brand name, size, care instructions, and country of origin — required for retail.</div>
         </div>
         <div class="ppos-card">
-          <div class="ppos-top"><div class="ppos-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><span class="ppos-badge">All-Over</span></div>
+          <div class="ppos-top"><span class="ppos-badge">All-Over</span></div>
           <div><div class="ppos-num">POSITION 12</div><div class="ppos-name">All-Over Print</div></div>
           <div class="ppos-hint">Full sublimation print covering the entire garment including waistband and panels — bold and seamless.</div>
         </div>
@@ -827,18 +832,54 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
       <p class="section-sub">All embroidery is digitised in-house and stitched to your exact specification. Available on any garment category we source.</p>
     </div>
     <div class="embroid-grid">
-      <div class="embroid-card"><span class="embroid-icon">&#129525;</span><div class="embroid-num">#1</div><div class="embroid-name">Flat Embroidery</div><div class="embroid-desc">Classic flat stitch logo or text. Crisp, clean, and professional — the most widely used branding option.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#127992;</span><div class="embroid-num">#2</div><div class="embroid-name">3D Puff Embroidery</div><div class="embroid-desc">Raised foam underlay gives logos a bold, three-dimensional effect. Ideal for caps, chest badges, and streetwear branding.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#10024;</span><div class="embroid-num">#3</div><div class="embroid-name">Chenille Embroidery</div><div class="embroid-desc">Soft, plush yarn stitching with a velvet-like texture. Popular for varsity, collegiate, and premium lifestyle brands.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#128993;</span><div class="embroid-num">#4</div><div class="embroid-name">Sequin Embroidery</div><div class="embroid-desc">Reflective sequin panels or patches stitched directly onto the garment. Eye-catching and on-trend for fashion activewear.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#127775;</span><div class="embroid-num">#5</div><div class="embroid-name">Metallic Thread</div><div class="embroid-desc">Shimmering gold, silver, or copper thread woven into the design for a luxurious, high-end finish.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#128276;</span><div class="embroid-num">#6</div><div class="embroid-name">Appliqué Embroidery</div><div class="embroid-desc">Fabric cut-out shapes stitched and secured onto the garment surface. Great for large logos or bold graphic elements.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#127981;</span><div class="embroid-num">#7</div><div class="embroid-name">Patch Embroidery</div><div class="embroid-desc">Pre-made embroidered patch heat-pressed or sewn onto garments. Removable and reusable — perfect for team wear.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#127806;</span><div class="embroid-num">#8</div><div class="embroid-name">Tone-on-Tone</div><div class="embroid-desc">Same colour thread as the fabric for a subtle, textured brand mark. Minimal and refined — popular in premium basics.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#127380;</span><div class="embroid-num">#9</div><div class="embroid-name">Monogram Letters</div><div class="embroid-desc">Personalised initials or lettering in classic or custom font styles. Widely used in luxury, gifting, and bespoke collections.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#129516;</span><div class="embroid-num">#10</div><div class="embroid-name">Badge / Crest</div><div class="embroid-desc">Shaped embroidered crest — ideal for sports teams, clubs, schools, and heritage lifestyle brands seeking a premium identity.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#127988;</span><div class="embroid-num">#11</div><div class="embroid-name">Woven Label</div><div class="embroid-desc">Custom-woven brand label in polyester or satin — sewn at collar, hem, or waistband. A must for professional retail presentation.</div></div>
-      <div class="embroid-card"><span class="embroid-icon">&#128218;</span><div class="embroid-num">#12</div><div class="embroid-name">Printed Label</div><div class="embroid-desc">Full-colour printed label for care instructions, size, brand name, and barcode. Cost-effective and fully customisable.</div></div>
+      <div class="embroid-card">
+        <div class="embroid-num">#1</div><div class="embroid-name">Flat Embroidery</div>
+        <div class="embroid-desc">Classic flat stitch logo or text. Crisp, clean, and professional — the most widely used branding option.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#2</div><div class="embroid-name">3D Puff Embroidery</div>
+        <div class="embroid-desc">Raised foam underlay gives logos a bold, three-dimensional effect. Ideal for caps, chest badges, and streetwear.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#3</div><div class="embroid-name">Chenille Embroidery</div>
+        <div class="embroid-desc">Soft, plush yarn stitching with a velvet-like texture. Popular for varsity, collegiate, and premium lifestyle brands.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#4</div><div class="embroid-name">Sequin Embroidery</div>
+        <div class="embroid-desc">Reflective sequin panels stitched onto the garment. Eye-catching and on-trend for fashion activewear.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#5</div><div class="embroid-name">Metallic Thread</div>
+        <div class="embroid-desc">Shimmering gold, silver, or copper thread woven into the design for a luxurious, high-end finish.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#6</div><div class="embroid-name">Appliqué Embroidery</div>
+        <div class="embroid-desc">Fabric cut-out shapes stitched and secured onto the garment surface. Great for large logos or bold graphic elements.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#7</div><div class="embroid-name">Patch Embroidery</div>
+        <div class="embroid-desc">Pre-made embroidered patch heat-pressed or sewn onto garments. Removable and reusable — perfect for team wear.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#8</div><div class="embroid-name">Tone-on-Tone</div>
+        <div class="embroid-desc">Same colour thread as the fabric for a subtle, textured brand mark. Minimal and refined — popular in premium basics.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#9</div><div class="embroid-name">Monogram Letters</div>
+        <div class="embroid-desc">Personalised initials or lettering in classic or custom font styles. Widely used in luxury, gifting, and bespoke collections.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#10</div><div class="embroid-name">Badge / Crest</div>
+        <div class="embroid-desc">Shaped embroidered crest — ideal for sports teams, clubs, schools, and heritage lifestyle brands.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#11</div><div class="embroid-name">Woven Label</div>
+        <div class="embroid-desc">Custom-woven brand label in polyester or satin — sewn at collar, hem, or waistband. Essential for retail presentation.</div>
+      </div>
+      <div class="embroid-card">
+        <div class="embroid-num">#12</div><div class="embroid-name">Printed Label</div>
+        <div class="embroid-desc">Full-colour printed label for care instructions, size, brand name, and barcode. Cost-effective and fully customisable.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1614,9 +1655,9 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
       <div class="rfq-form" id="contact">
         <div class="form-h">Get Your Free Quote</div>
         <div class="form-sh">Share your requirements — we respond within 24 hours.</div>
-        <form action="https://formsubmit.co/sourcing.upnsapparel@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Quote Request - UPNS Apparel Website">
-          <input type="hidden" name="_captcha" value="false">
+        <form action="https://formspree.io/f/mvzyjqbg" method="POST">
+          
+          
           <div class="fr">
             <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
             <div class="fg"><label>Company Name</label><input type="text" name="company" placeholder="Your brand / company"></div>
