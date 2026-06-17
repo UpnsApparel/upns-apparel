@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Products — Full Garment Catalogue | UPNS Apparel Bangladesh</title>
+<meta name="description" content="Full product catalogue — gymwear, sportswear, athleisure, workwear, rainwear, lingerie, outerwear, knitwear, woven, denim. Men, women, kids. MOQ 1,000 pcs. Bangladesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F3A;--nm:#132B52;--nl:#1C3D6B;
+  --gold:#C9A84C;--gl:#E2C87A;--gp:rgba(201,168,76,.08);
+  --white:#fff;--off:#F5F6F8;--linen:#F8F5F0;
+  --g100:#E8ECF0;--g300:#B8C3CE;--g500:#7A8796;--g700:#3E4A56;
+  --ss:0 2px 12px rgba(11,31,58,.07);--sm:0 8px 28px rgba(11,31,58,.12);
+  --r:12px;--t:.26s cubic-bezier(.4,0,.2,1);
+  --fd:'Cormorant Garamond',Georgia,serif;--fb:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--navy);background:var(--white);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+.con{width:min(1200px,90%);margin-inline:auto}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(11,31,58,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-logo .n{font-family:var(--fd);font-size:1.45rem;font-weight:700;color:#fff;letter-spacing:.04em}
+.nav-logo .s{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.nl2{display:flex;gap:28px;list-style:none}
+.nl2 a{color:rgba(255,255,255,.72);font-size:.82rem;font-weight:500;transition:color var(--t)}
+.nl2 a:hover,.nl2 a.act{color:var(--gold)}
+.ncta{display:inline-flex;align-items:center;background:var(--gold);color:var(--navy);padding:9px 20px;border-radius:5px;font-size:.82rem;font-weight:700;transition:var(--t)}
+.ncta:hover{background:var(--gl)}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer}
+.hbg span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+.mob{display:none;position:fixed;top:68px;left:0;right:0;background:var(--navy);padding:16px 5%;z-index:199;flex-direction:column;gap:2px;border-bottom:1px solid rgba(255,255,255,.08);max-height:calc(100vh - 68px);overflow-y:auto}
+.mob.open{display:flex}
+.mob a{color:rgba(255,255,255,.78);font-size:.9rem;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mob a:hover{color:var(--gold)}
+
+/* PAGE HERO */
+.ph2{padding:136px 0 60px;background:var(--navy);text-align:center;position:relative;overflow:hidden}
+.ph2::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 120%,rgba(201,168,76,.06) 0%,transparent 60%);pointer-events:none}
+.ey{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;justify-content:center}
+.ey::before,.ey::after{content:'';display:block;width:20px;height:2px;background:var(--gold)}
+.ph2 h1{font-family:var(--fd);font-size:clamp(2.2rem,4vw,3.1rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:14px}
+.ph2 h1 em{font-style:italic;color:var(--gold)}
+.ph2 p{font-size:.94rem;color:rgba(255,255,255,.5);max-width:520px;margin:0 auto;line-height:1.8}
+
+/* BC */
+.bc{background:var(--linen);border-bottom:1px solid #EDE8DF;padding:11px 0}
+.bci{display:flex;align-items:center;gap:8px;font-size:.76rem;color:var(--g500)}
+.bci a{color:var(--navy);font-weight:500}.bci a:hover{color:var(--gold)}
+.bcsep{color:var(--g300)}.bccur{color:var(--gold);font-weight:600}
+
+/* CAT NAV */
+.cat-nav{background:var(--white);border-bottom:1px solid var(--g100);position:sticky;top:68px;z-index:90;box-shadow:0 2px 10px rgba(11,31,58,.06)}
+.cni{display:flex;overflow-x:auto;scrollbar-width:none}
+.cni::-webkit-scrollbar{display:none}
+.ctab{flex-shrink:0;padding:14px 18px;font-size:.78rem;font-weight:600;color:var(--g500);cursor:pointer;border:none;border-bottom:3px solid transparent;background:none;font-family:var(--fb);white-space:nowrap;transition:var(--t)}
+.ctab:hover{color:var(--navy);background:var(--off)}
+.ctab.active{color:var(--navy);border-bottom-color:var(--gold);background:var(--gp)}
+
+/* MAIN */
+.main{padding:48px 0 96px}
+
+/* CAT SECTION */
+.cs{margin-bottom:72px;scroll-margin-top:122px}
+.cs-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid var(--g100);gap:18px;flex-wrap:wrap}
+.csey{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.cs-name{font-family:var(--fd);font-size:1.85rem;font-weight:700;color:var(--navy);line-height:1.1}
+.cs-desc{font-size:.81rem;color:var(--g500);max-width:460px;line-height:1.6;margin-top:4px}
+.cs-btn{flex-shrink:0;display:inline-flex;align-items:center;background:var(--navy);color:#fff;padding:10px 18px;border-radius:5px;font-size:.76rem;font-weight:600;transition:var(--t);white-space:nowrap}
+.cs-btn:hover{background:var(--nl);transform:translateY(-1px)}
+
+/* FILTER */
+.ftabs{display:flex;gap:7px;margin-bottom:20px;flex-wrap:wrap}
+.ftab{padding:6px 15px;border-radius:100px;font-size:.74rem;font-weight:600;cursor:pointer;border:1.5px solid var(--g100);background:var(--white);color:var(--g500);transition:var(--t);font-family:var(--fb)}
+.ftab:hover{border-color:var(--navy);color:var(--navy)}
+.ftab.active{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* PRODUCT GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+
+/* PRODUCT CARD */
+.pcard{background:var(--white);border-radius:var(--r);border:1px solid var(--g100);overflow:hidden;box-shadow:var(--ss);transition:var(--t);cursor:pointer;position:relative}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--sm);border-color:rgba(201,168,76,.28)}
+.pcard.hidden{display:none}
+.pimg{width:100%;aspect-ratio:3/4;overflow:hidden;position:relative;background:#ECEEF1}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.pcard:hover .pimg img{transform:scale(1.06)}
+.pimg .pph{width:100%;height:100%;background:linear-gradient(135deg,#D5DCE5,#C2CDD8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#7A8A99;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:12px}
+/* REPLACE placeholder: remove .pph div, add: <img src="images/YOURFILE.jpeg" alt="Product name"> */
+.pbadge{position:absolute;top:9px;left:9px;background:rgba(11,31,58,.84);backdrop-filter:blur(3px);color:var(--gold);font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:100px}
+.pov{position:absolute;inset:0;background:rgba(11,31,58,0);transition:background var(--t);display:flex;align-items:flex-end;padding:12px}
+.pcard:hover .pov{background:rgba(11,31,58,.3)}
+.pov-btn{width:100%;background:var(--gold);color:var(--navy);border:none;padding:8px 12px;border-radius:5px;font-family:var(--fb);font-size:.72rem;font-weight:700;cursor:pointer;transform:translateY(6px);opacity:0;transition:var(--t)}
+.pcard:hover .pov-btn{transform:translateY(0);opacity:1}
+.pbody{padding:12px 13px 14px}
+.pname{font-weight:600;font-size:.84rem;color:var(--navy);margin-bottom:4px;line-height:1.3}
+.pmat{font-size:.7rem;color:var(--g500);line-height:1.5;margin-bottom:7px}
+.pmat strong{color:var(--g700)}
+.ptags{display:flex;gap:4px;flex-wrap:wrap}
+.ptag{font-size:.6rem;font-weight:600;padding:2px 7px;border-radius:100px;background:var(--off);color:var(--navy);border:1px solid var(--g100)}
+
+/* SECTION CTA */
+.scta{background:var(--gp);border:1px solid rgba(201,168,76,.18);border-radius:var(--r);padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;flex-wrap:wrap}
+.scta p{font-size:.82rem;color:var(--navy);font-weight:500}
+.scta p span{color:var(--g500);font-weight:400}
+.scta a{flex-shrink:0;background:var(--gold);color:var(--navy);padding:8px 16px;border-radius:5px;font-size:.76rem;font-weight:700;transition:var(--t)}
+.scta a:hover{background:var(--gl)}
+
+/* HOME TEXTILE CTA */
+.htcta{background:var(--navy);border-radius:var(--r);padding:38px 42px;display:flex;align-items:center;justify-content:space-between;gap:26px;margin-bottom:72px;flex-wrap:wrap;position:relative;overflow:hidden}
+.htcta::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(201,168,76,.1) 0%,transparent 70%);pointer-events:none}
+.htcta-btn{flex-shrink:0;display:inline-flex;align-items:center;background:var(--gold);color:var(--navy);padding:13px 24px;border-radius:5px;font-size:.84rem;font-weight:700;transition:var(--t);white-space:nowrap}
+.htcta-btn:hover{background:var(--gl);transform:translateY(-2px)}
+
+/* MODAL */
+.modal-ov{display:none;position:fixed;inset:0;background:rgba(5,12,25,.82);z-index:500;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.modal-ov.open{display:flex}
+.modal{background:var(--white);border-radius:16px;max-width:800px;width:100%;max-height:90vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.modal-img{overflow:hidden;border-radius:16px 0 0 16px}
+.modal-img .pph{width:100%;height:100%;min-height:320px;border-radius:16px 0 0 16px;background:linear-gradient(135deg,#D5DCE5,#C2CDD8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#7A8A99;font-size:.7rem;font-weight:700;text-transform:uppercase;padding:16px;text-align:center}
+.modal-img img{width:100%;height:100%;object-fit:cover;border-radius:16px 0 0 16px}
+.modal-body{padding:30px 26px;display:flex;flex-direction:column;gap:9px}
+.mcl{position:absolute;top:12px;right:12px;background:var(--off);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:.95rem;display:flex;align-items:center;justify-content:center;color:var(--g700);transition:var(--t);z-index:10;font-family:var(--fb)}
+.mcl:hover{background:var(--navy);color:#fff}
+.mey{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}
+.mname{font-family:var(--fd);font-size:1.7rem;font-weight:700;color:var(--navy);line-height:1.2}
+.mdiv{height:1px;background:var(--g100);margin:2px 0}
+.mrow label{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g500);display:block;margin-bottom:2px}
+.mrow span{font-size:.82rem;color:var(--navy);font-weight:500;line-height:1.55}
+.mtags{display:flex;gap:5px;flex-wrap:wrap;margin-top:3px}
+.mrfq{margin-top:auto;background:var(--gold);color:var(--navy);padding:12px 18px;border-radius:6px;font-size:.82rem;font-weight:700;text-align:center;display:block;transition:var(--t)}
+.mrfq:hover{background:var(--gl)}
+
+/* FOOTER */
+.foot{background:#060E1A;padding:48px 0 22px;border-top:1px solid rgba(255,255,255,.06)}
+.fg5{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.fn{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:#fff}
+.fsub{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.fd4{font-size:.76rem;color:rgba(255,255,255,.38);line-height:1.7;max-width:230px}
+.fh{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:11px}
+.fu{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fu a{font-size:.75rem;color:rgba(255,255,255,.4);transition:color var(--t)}.fu a:hover{color:var(--gold)}
+.fb{border-top:1px solid rgba(255,255,255,.06);padding-top:18px;font-size:.7rem;color:rgba(255,255,255,.28);display:flex;justify-content:space-between;flex-wrap:wrap;gap:7px}
+
+@media(max-width:1024px){.modal{grid-template-columns:1fr}.modal-img{border-radius:16px 16px 0 0}.modal-img .pph,.modal-img img{border-radius:16px 16px 0 0;min-height:200px}.fg5{grid-template-columns:1fr 1fr;gap:22px}}
+@media(max-width:768px){.nl2,.ncta{display:none}.hbg{display:flex}.pgrid{grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px}.cs-hdr{flex-direction:column;align-items:flex-start}.htcta{flex-direction:column;padding:24px 20px}.fg5{grid-template-columns:1fr;gap:18px}.scta{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="n">UPNS Apparel</div>
+    <div class="s">🇧🇩 Garment Sourcing · Bangladesh</div>
+  </a>
+  <ul class="nl2">
+    <li><a href="index.html#why">Why UPNS</a></li>
+    <li><a href="products.html" class="act">Apparel</a></li>
+    <li><a href="bedsheet.html">Home Textile</a></li>
+    <li><a href="index.html#process">How It Works</a></li>
+    <li><a href="index.html#quality">Quality</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="index.html#rfq" class="ncta">Get a Quote</a>
+    <button class="hbg" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mob" id="mob">
+  <a href="index.html">Home</a>
+  <a href="index.html#why">Why UPNS</a>
+  <a href="products.html">Apparel Catalogue</a>
+  <a href="bedsheet.html">Home Textile</a>
+  <a href="index.html#process">How It Works</a>
+  <a href="index.html#quality">Quality Control</a>
+  <a href="index.html#rfq">Get a Quote</a>
+</nav>
+
+<div class="ph2">
+  <div class="con">
+    <div class="ey">Full Product Catalogue</div>
+    <h1>Every product we can<br><em>source for you.</em></h1>
+    <p>Browse by category. Click any product for full material specs. MOQ 1,000 pcs per style. Quote back within 48 hours.</p>
+  </div>
+</div>
+
+<div class="bc"><div class="con"><div class="bci">
+  <a href="index.html">Home</a><span class="bcsep">›</span><span class="bccur">Products</span>
+</div></div></div>
+
+<nav class="cat-nav">
+  <div class="con">
+    <div class="cni">
+      <button class="ctab active" onclick="goTo('knitwear',this)">Knit</button>
+      <button class="ctab" onclick="goTo('woven',this)">Woven</button>
+      <button class="ctab" onclick="goTo('denim',this)">Denim</button>
+      <button class="ctab" onclick="goTo('knitwear',this)">Sweater</button>
+      <button class="ctab" onclick="goTo('outerwear',this)">Outerwear</button>
+      <button class="ctab" onclick="goTo('workwear',this)">Workwear</button>
+      <button class="ctab" onclick="goTo('gymwear',this)">Activewear</button>
+      <button class="ctab" onclick="goTo('sportswear',this)">Sportswear</button>
+      <button class="ctab" onclick="goTo('rainwear',this)">Rainwear</button>
+      <button class="ctab" onclick="goTo('lingerie',this)">Lingerie</button>
+      <button class="ctab" onclick="window.location='bedsheet.html'">Home Textile</button>
+    </div>
+  </div>
+</nav>
+
+<div class="main"><div class="con">
+
+<!-- GYMWEAR -->
+<div class="cs" id="gymwear">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 01</div><div class="cs-name">Gymwear</div><p class="cs-desc">Performance-first gymwear. 4-way stretch, moisture-wicking, compression. Men, women, and kids. MOQ 1,000 pcs/style.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('gymwear','all',this)">All</button>
+    <button class="ftab" onclick="filter('gymwear','men',this)">Men</button>
+    <button class="ftab" onclick="filter('gymwear','women',this)">Women</button>
+    <button class="ftab" onclick="filter('gymwear','unisex',this)">Unisex</button>
+    <button class="ftab" onclick="filter('gymwear','kids',this)">Kids</button>
+  </div>
+  <div class="pgrid" id="grid-gymwear">
+    <div class="pcard" data-cat="gymwear" data-gender="women" onclick="openModal('Gym Leggings — High Waist','Women','90% Polyester 10% Spandex · S/J · GSM 200 · Squat-proof · Phone pocket','Gymwear','MOQ 1000,Squat-Proof,High Waist,Phone Pocket,Custom Print,XS–3XL')"><div class="pimg"><div class="pph"><span>Women High Waist Leggings</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's High Waist Leggings</div><p class="pmat"><strong>Material:</strong> 90% Poly 10% Spandex · GSM 200 · Squat-proof</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="women" onclick="openModal('Gym Leggings — Seamless','Women','80% Nylon 20% Spandex · Seamless knit · GSM 180 · No side seams','Gymwear','MOQ 1000,Seamless,No Side Seams,Custom Colour,XS–2XL')"><div class="pimg"><div class="pph"><span>Women Seamless Leggings</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Seamless Leggings</div><p class="pmat"><strong>Material:</strong> 80% Nylon 20% Spandex · Seamless · GSM 180</p><div class="ptags"><span class="ptag">XS–2XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">Seamless</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="women" onclick="openModal('Sports Bra — Medium Support','Women','87% Polyester 13% Spandex · GSM 160 · Removable cups · Racerback','Gymwear','MOQ 1000,Removable Cups,Medium Support,Racerback,Custom Colour,XS–XL')"><div class="pimg"><div class="pph"><span>Women Sports Bra Med Support</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Sports Bra — Medium Support</div><p class="pmat"><strong>Material:</strong> 87% Poly 13% Spandex · GSM 160 · Removable cups</p><div class="ptags"><span class="ptag">XS–XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="women" onclick="openModal('Sports Bra — High Support','Women','88% Polyester 12% Spandex · GSM 190 · Underwire optional · Thick straps','Gymwear','MOQ 1000,High Support,Underwire Option,Wide Straps,XS–XL')"><div class="pimg"><div class="pph"><span>Women Sports Bra High Support</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Sports Bra — High Support</div><p class="pmat"><strong>Material:</strong> 88% Poly 12% Spandex · GSM 190 · Underwire option</p><div class="ptags"><span class="ptag">XS–XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">High Support</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="women" onclick="openModal('Crop Tank Top — Open Back','Women','88% Polyester 12% Spandex · S/J · GSM 145 · Open back · Spaghetti straps','Gymwear','MOQ 1000,Open Back,Spaghetti Straps,Custom Colour,XS–2XL')"><div class="pimg"><div class="pph"><span>Women Crop Tank Open Back</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Crop Tank — Open Back</div><p class="pmat"><strong>Material:</strong> 88% Poly 12% Spandex · GSM 145 · Open back</p><div class="ptags"><span class="ptag">XS–2XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="women" onclick="openModal('Gym Shorts — Biker','Women','80% Nylon 20% Spandex · GSM 200 · High waist · 8 inch inseam','Gymwear','MOQ 1000,High Waist,8in Inseam,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Biker Shorts</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Biker Shorts</div><p class="pmat"><strong>Material:</strong> 80% Nylon 20% Spandex · GSM 200 · High waist</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="men" onclick="openModal('Compression Shorts','Men','90% Polyester 10% Spandex · S/J · GSM 180 · 4-way stretch · Inner brief','Gymwear','MOQ 1000,4-Way Stretch,Inner Brief,Custom Colour,S–3XL')"><div class="pimg"><div class="pph"><span>Men Compression Shorts</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Compression Shorts</div><p class="pmat"><strong>Material:</strong> 90% Poly 10% Spandex · GSM 180 · 4-way stretch</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="men" onclick="openModal('Performance Vest','Men','88% Polyester 12% Spandex · S/J · GSM 160 · Moisture-wicking · Mesh panels','Gymwear','MOQ 1000,Moisture-Wicking,Mesh Panels,Custom Colour,S–3XL')"><div class="pimg"><div class="pph"><span>Men Performance Vest</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Performance Vest</div><p class="pmat"><strong>Material:</strong> 88% Poly 12% Spandex · GSM 160 · Mesh panels</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="men" onclick="openModal('Gym Joggers','Men','82% Polyester 18% Cotton · Terry · GSM 280 · Brushed inner · Zip pockets','Gymwear','MOQ 1000,Brushed Inner,Zip Pockets,Custom Waistband,S–3XL')"><div class="pimg"><div class="pph"><span>Men Gym Joggers</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Gym Joggers</div><p class="pmat"><strong>Material:</strong> 82% Poly 18% Cotton · Terry · GSM 280 · Zip pockets</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="unisex" onclick="openModal('Gym T-Shirt — Regular Fit','Unisex','65% Polyester 35% Cotton · S/J · GSM 180 · Moisture-wicking','Gymwear','MOQ 1000,Custom Print,Regular Fit,XS–4XL')"><div class="pimg"><div class="pph"><span>Unisex Gym T-Shirt Regular</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Gym T-Shirt — Regular Fit</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 180 · Moisture-wicking</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="unisex" onclick="openModal('Gym T-Shirt — Oversized Drop Shoulder','Unisex','100% Cotton combed · S/J · GSM 220 · Drop shoulder · Boxy fit','Gymwear','MOQ 1000,Drop Shoulder,Boxy Fit,Custom Print,XS–4XL')"><div class="pimg"><div class="pph"><span>Unisex Gym T-Shirt Oversized</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Gym T-Shirt — Oversized Drop Shoulder</div><p class="pmat"><strong>Material:</strong> 100% Cotton Combed · GSM 220 · Drop shoulder</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="kids" onclick="openModal('Kids Gym Set — Girls','Kids','87% Polyester 13% Spandex · GSM 160 · Crop top + leggings set','Gymwear','MOQ 1000,Matching Set,Kids Sizing,Custom Colour,4–14 yrs')"><div class="pimg"><div class="pph"><span>Girls Gym Set</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Gym Set — Girls</div><p class="pmat"><strong>Material:</strong> 87% Poly 13% Spandex · GSM 160 · Crop + leggings</p><div class="ptags"><span class="ptag">4–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="gymwear" data-gender="kids" onclick="openModal('Kids Training Shorts — Boys','Kids','65% Polyester 35% Cotton · GSM 160 · Elastic waist · Side pockets','Gymwear','MOQ 1000,Kids Sizing,Elastic Waist,Custom Colour,4–14 yrs')"><div class="pimg"><div class="pph"><span>Boys Training Shorts</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Training Shorts — Boys</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 160 · Elastic waist</p><div class="ptags"><span class="ptag">4–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Need a different spec? <span>We source to any brief — fabric, GSM, construction, fit.</span></p><a href="index.html#rfq">Send Your Brief</a></div>
+</div>
+
+<!-- ACTIVEWEAR -->
+<div class="cs" id="activewear">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 02</div><div class="cs-name">Activewear</div><p class="cs-desc">Everyday fitness and active lifestyle wear. Breathable, stretch, quick-dry. Men, women, and kids.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('activewear','all',this)">All</button>
+    <button class="ftab" onclick="filter('activewear','men',this)">Men</button>
+    <button class="ftab" onclick="filter('activewear','women',this)">Women</button>
+    <button class="ftab" onclick="filter('activewear','kids',this)">Kids</button>
+  </div>
+  <div class="pgrid" id="grid-activewear">
+    <div class="pcard" data-cat="activewear" data-gender="men" onclick="openModal('Active Shorts — 5 Inch','Men','65% Polyester 35% Cotton · GSM 220 · Side pockets · 5in inseam','Activewear','MOQ 1000,Side Pockets,5in Inseam,Elastic Waist,S–3XL')"><div class="pimg"><div class="pph"><span>Men Active Shorts 5in</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Active Shorts — 5 Inch</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 220 · Side pockets</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="activewear" data-gender="men" onclick="openModal('Active Shorts — 7 Inch','Men','65% Polyester 35% Cotton · GSM 220 · Side pockets · 7in inseam','Activewear','MOQ 1000,Side Pockets,7in Inseam,Elastic Waist,S–3XL')"><div class="pimg"><div class="pph"><span>Men Active Shorts 7in</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Active Shorts — 7 Inch</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 220 · Side pockets</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="activewear" data-gender="men" onclick="openModal('Active Joggers — Tapered','Men','95% Polyester 5% Spandex · GSM 180 · Tapered fit · Ankle zip','Activewear','MOQ 1000,Tapered Fit,Ankle Zip,Zip Pockets,S–3XL')"><div class="pimg"><div class="pph"><span>Men Active Joggers Tapered</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Active Joggers — Tapered</div><p class="pmat"><strong>Material:</strong> 95% Poly 5% Spandex · GSM 180 · Tapered fit</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="activewear" data-gender="women" onclick="openModal('Active Tank Top','Women','93% Polyester 7% Spandex · GSM 145 · Built-in shelf bra · Relaxed fit','Activewear','MOQ 1000,Built-in Bra,Relaxed Fit,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Active Tank Top</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Active Tank Top</div><p class="pmat"><strong>Material:</strong> 93% Poly 7% Spandex · GSM 145 · Built-in bra</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="activewear" data-gender="women" onclick="openModal('Active Set — Tank + Shorts','Women','93% Polyester 7% Spandex · GSM 170 · Matching co-ord set','Activewear','MOQ 1000,Co-ord Set,Custom Colour,Private Label,XS–2XL')"><div class="pimg"><div class="pph"><span>Women Active Set</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Active Set — Tank + Shorts</div><p class="pmat"><strong>Material:</strong> 93% Poly 7% Spandex · GSM 170 · Co-ord set</p><div class="ptags"><span class="ptag">XS–2XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">Set</span></div></div></div>
+    <div class="pcard" data-cat="activewear" data-gender="kids" onclick="openModal('Kids Activewear Set — Girls','Kids','82% Polyester 8% Spandex · GSM 160 · Top + shorts/leggings · UPF 40+','Activewear','MOQ 1000,UPF 40+,Kids Set,Durable Print,4–14 yrs')"><div class="pimg"><div class="pph"><span>Girls Activewear Set</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Activewear Set — Girls</div><p class="pmat"><strong>Material:</strong> 82% Poly 8% Spandex · GSM 160 · UPF 40+</p><div class="ptags"><span class="ptag">4–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="activewear" data-gender="kids" onclick="openModal('Kids Active Shorts — Boys','Kids','65% Polyester 35% Cotton · GSM 160 · Elastic waist · Side pockets','Activewear','MOQ 1000,Kids Sizing,Elastic Waist,Side Pockets,4–14 yrs')"><div class="pimg"><div class="pph"><span>Boys Active Shorts</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Active Shorts — Boys</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 160 · Side pockets</p><div class="ptags"><span class="ptag">4–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Need a full kids range? <span>We source complete men/women/kids collections to a single brief.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- SPORTSWEAR -->
+<div class="cs" id="sportswear">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 03</div><div class="cs-name">Sportswear</div><p class="cs-desc">Performance jerseys, training kits, tracksuits. Sublimation print. Team and retail. Kids kits available.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('sportswear','all',this)">All</button>
+    <button class="ftab" onclick="filter('sportswear','men',this)">Men</button>
+    <button class="ftab" onclick="filter('sportswear','women',this)">Women</button>
+    <button class="ftab" onclick="filter('sportswear','kids',this)">Kids</button>
+    <button class="ftab" onclick="filter('sportswear','unisex',this)">Unisex</button>
+  </div>
+  <div class="pgrid" id="grid-sportswear">
+    <div class="pcard" data-cat="sportswear" data-gender="unisex" onclick="openModal('Football / Soccer Jersey','Unisex','100% Polyester interlock · GSM 140 · Sublimation print · Vented back · Mesh panels','Sportswear','MOQ 1000,Sublimation,Custom Number,Vented Back,XS–4XL')"><div class="pimg"><div class="pph"><span>Football Jersey</span></div><span class="pbadge">Sportswear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Football / Soccer Jersey</div><p class="pmat"><strong>Material:</strong> 100% Poly Interlock · GSM 140 · Sublimation</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="sportswear" data-gender="kids" onclick="openModal('Kids Football Kit','Kids','100% Polyester interlock · GSM 140 · Jersey + shorts set · Sublimation','Sportswear','MOQ 1000,Jersey + Shorts Set,Sublimation,Custom Name,4–14 yrs')"><div class="pimg"><div class="pph"><span>Kids Football Kit</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Football Kit</div><p class="pmat"><strong>Material:</strong> 100% Poly Interlock · GSM 140 · Jersey + shorts</p><div class="ptags"><span class="ptag">4–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="sportswear" data-gender="unisex" onclick="openModal('Training Tracksuit Set','Unisex','90% Polyester 10% Spandex · GSM 220 · Zip jacket + jogger · Custom colour','Sportswear','MOQ 1000,Full Set,Zip Jacket,Custom Colour,XS–4XL')"><div class="pimg"><div class="pph"><span>Training Tracksuit</span></div><span class="pbadge">Sportswear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Training Tracksuit Set</div><p class="pmat"><strong>Material:</strong> 90% Poly 10% Spandex · GSM 220 · Full set</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">Full Set</span></div></div></div>
+    <div class="pcard" data-cat="sportswear" data-gender="men" onclick="openModal('Running Shorts — 2-in-1','Men','97% Polyester 3% Spandex · S/J · GSM 140 · 2-in-1 inner liner · Reflective strip option','Sportswear','MOQ 1000,2-in-1 Liner,Reflective Option,Custom Colour,S–3XL')"><div class="pimg"><div class="pph"><span>Men Running Shorts 2-in-1</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Running Shorts — 2-in-1</div><p class="pmat"><strong>Material:</strong> 97% Poly 3% Spandex · GSM 140 · 2-in-1 liner</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="sportswear" data-gender="women" onclick="openModal('Running Tights','Women','88% Polyester 12% Spandex · GSM 180 · Reflective strip · Back zip pocket · High waist','Sportswear','MOQ 1000,Reflective Strip,Back Zip Pocket,High Waist,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Running Tights</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Running Tights</div><p class="pmat"><strong>Material:</strong> 88% Poly 12% Spandex · GSM 180 · Reflective strip</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="sportswear" data-gender="unisex" onclick="openModal('Cycling Bib Shorts','Unisex','90% Polyester 10% Spandex · GSM 200 · 8-panel pad · Bib straps','Sportswear','MOQ 1000,8-Panel Pad,Bib Straps,Sublimation Option,XS–3XL')"><div class="pimg"><div class="pph"><span>Cycling Bib Shorts</span></div><span class="pbadge">Sportswear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Cycling Bib Shorts</div><p class="pmat"><strong>Material:</strong> 90% Poly 10% Spandex · GSM 200 · 8-panel pad</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="sportswear" data-gender="unisex" onclick="openModal('Swimwear — Competition','Unisex','80% Polyamide 20% Elastane · Chlorine resistant · UV50+ · Flat lock seams','Sportswear','MOQ 1000,Chlorine Resistant,UV50+,Flat Lock Seams,XS–3XL')"><div class="pimg"><div class="pph"><span>Competition Swimwear</span></div><span class="pbadge">Sportswear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Swimwear — Competition</div><p class="pmat"><strong>Material:</strong> 80% Polyamide 20% Elastane · Chlorine resistant</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="sportswear" data-gender="kids" onclick="openModal('Kids Tracksuit Set','Kids','90% Polyester 10% Spandex · GSM 200 · Zip jacket + jogger · Custom colour','Sportswear','MOQ 1000,Full Set,Kids Sizing,Custom Colour,4–14 yrs')"><div class="pimg"><div class="pph"><span>Kids Tracksuit Set</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Tracksuit Set</div><p class="pmat"><strong>Material:</strong> 90% Poly 10% Spandex · GSM 200 · Full set</p><div class="ptags"><span class="ptag">4–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Team kits with custom names, numbers, crests? <span>Sublimation printing available on all sportswear.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- ATHLEISURE -->
+<div class="cs" id="athleisure">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 04</div><div class="cs-name">Athleisure</div><p class="cs-desc">Streetwear aesthetics, activewear construction. The everyday pieces your customers reach for first.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('athleisure','all',this)">All</button>
+    <button class="ftab" onclick="filter('athleisure','men',this)">Men</button>
+    <button class="ftab" onclick="filter('athleisure','women',this)">Women</button>
+    <button class="ftab" onclick="filter('athleisure','unisex',this)">Unisex</button>
+    <button class="ftab" onclick="filter('athleisure','kids',this)">Kids</button>
+  </div>
+  <div class="pgrid" id="grid-athleisure">
+    <div class="pcard" data-cat="athleisure" data-gender="unisex" onclick="openModal('Oversized T-Shirt','Unisex','100% Cotton combed · GSM 220 · Drop shoulder · Boxy fit','Athleisure','MOQ 1000,Drop Shoulder,Boxy Fit,Custom Print,XS–4XL')"><div class="pimg"><div class="pph"><span>Oversized T-Shirt</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Oversized T-Shirt</div><p class="pmat"><strong>Material:</strong> 100% Cotton Combed · GSM 220 · Drop shoulder</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="athleisure" data-gender="unisex" onclick="openModal('Sweatpants — Cuffed','Unisex','80% Cotton 20% Polyester · French Terry · GSM 320 · Cuffed ankle · Side pockets','Athleisure','MOQ 1000,French Terry,Cuffed Ankle,Side Pockets,XS–4XL')"><div class="pimg"><div class="pph"><span>Sweatpants Cuffed</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Sweatpants — Cuffed</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · French Terry · GSM 320</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="athleisure" data-gender="unisex" onclick="openModal('Sweatpants — Straight Leg','Unisex','80% Cotton 20% Polyester · French Terry · GSM 320 · Straight leg · No cuff','Athleisure','MOQ 1000,French Terry,Straight Leg,No Cuff,XS–4XL')"><div class="pimg"><div class="pph"><span>Sweatpants Straight Leg</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Sweatpants — Straight Leg</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · French Terry · GSM 320</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="athleisure" data-gender="women" onclick="openModal('Bike Shorts — Seamless','Women','80% Nylon 20% Spandex · GSM 200 · High waist · Seamless','Athleisure','MOQ 1000,High Waist,Seamless,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Bike Shorts Seamless</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Bike Shorts — Seamless</div><p class="pmat"><strong>Material:</strong> 80% Nylon 20% Spandex · GSM 200 · Seamless</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="athleisure" data-gender="unisex" onclick="openModal('Jogger Set — Hoodie + Sweatpants','Unisex','60% Cotton 40% Polyester · Fleece-back · GSM 300 · Matching co-ord set','Athleisure','MOQ 1000,Matching Set,Fleece Back,Custom Colour,XS–4XL')"><div class="pimg"><div class="pph"><span>Athleisure Jogger Set</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Jogger Set — Hoodie + Sweatpants</div><p class="pmat"><strong>Material:</strong> 60% Cotton 40% Poly · Fleece-back · GSM 300</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">Co-ord Set</span></div></div></div>
+    <div class="pcard" data-cat="athleisure" data-gender="kids" onclick="openModal('Kids Jogger Set','Kids','65% Cotton 35% Polyester · GSM 260 · Hoodie + sweatpants set','Athleisure','MOQ 1000,Kids Set,Custom Colour,Matching,4–14 yrs')"><div class="pimg"><div class="pph"><span>Kids Jogger Set</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Jogger Set</div><p class="pmat"><strong>Material:</strong> 65% Cotton 35% Poly · GSM 260 · Full set</p><div class="ptags"><span class="ptag">4–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Building a lifestyle brand? <span>We source full seasonal collections — tops, bottoms, and outerwear as a matched range.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- OUTERWEAR -->
+<div class="cs" id="outerwear">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 05</div><div class="cs-name">Outerwear & Hoodies</div><p class="cs-desc">Winter layers that look expensive and hold up for years. Brushed fleece, French terry, bonded fabrics. Kids sizes available.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('outerwear','all',this)">All</button>
+    <button class="ftab" onclick="filter('outerwear','unisex',this)">Unisex</button>
+    <button class="ftab" onclick="filter('outerwear','women',this)">Women</button>
+    <button class="ftab" onclick="filter('outerwear','kids',this)">Kids</button>
+  </div>
+  <div class="pgrid" id="grid-outerwear">
+    <div class="pcard" data-cat="outerwear" data-gender="unisex" onclick="openModal('Pullover Hoodie — 3-End Fleece','Unisex','80% Cotton 20% Polyester · 3-end fleece · GSM 380 · Kangaroo pocket · Drawcord hood','Outerwear','MOQ 1000,3-End Fleece,Kangaroo Pocket,Custom Embroidery,XS–4XL')"><div class="pimg"><div class="pph"><span>Pullover Hoodie 3-End Fleece</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Pullover Hoodie — 3-End Fleece</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · 3-end fleece · GSM 380</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="outerwear" data-gender="unisex" onclick="openModal('Pullover Hoodie — French Terry','Unisex','80% Cotton 20% Polyester · French terry · GSM 320 · Kangaroo pocket · Lighter weight','Outerwear','MOQ 1000,French Terry,Lighter Weight,Custom Print,XS–4XL')"><div class="pimg"><div class="pph"><span>Pullover Hoodie French Terry</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Pullover Hoodie — French Terry</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · French terry · GSM 320</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="outerwear" data-gender="unisex" onclick="openModal('Zip-Up Hoodie','Unisex','80% Cotton 20% Polyester · French terry · GSM 340 · YKK zip · Side zip pockets','Outerwear','MOQ 1000,YKK Zip,French Terry,Zip Pockets,XS–4XL')"><div class="pimg"><div class="pph"><span>Zip-Up Hoodie</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Zip-Up Hoodie</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · French Terry · GSM 340</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="outerwear" data-gender="unisex" onclick="openModal('Crewneck Sweatshirt','Unisex','80% Cotton 20% Polyester · Fleece-back · GSM 320 · Ribbed cuffs and hem','Outerwear','MOQ 1000,Fleece Back,Ribbed Cuffs,Custom Embroidery,XS–4XL')"><div class="pimg"><div class="pph"><span>Crewneck Sweatshirt</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Crewneck Sweatshirt</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · Fleece-back · GSM 320</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="outerwear" data-gender="unisex" onclick="openModal('Track Jacket','Unisex','100% Polyester · Tricot lining · GSM 160 · Full zip · Elastic hem · Side pockets','Outerwear','MOQ 1000,Full Zip,Elastic Hem,Sublimation Option,XS–4XL')"><div class="pimg"><div class="pph"><span>Track Jacket</span></div><span class="pbadge">Unisex</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Track Jacket</div><p class="pmat"><strong>Material:</strong> 100% Polyester · Tricot lining · GSM 160</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="outerwear" data-gender="women" onclick="openModal('Oversized Hoodie — Women','Women','80% Cotton 20% Polyester · 3-end fleece · GSM 380 · Oversized fit · Drop shoulder','Outerwear','MOQ 1000,Oversized Fit,Drop Shoulder,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Oversized Hoodie</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Oversized Hoodie</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · 3-end fleece · GSM 380</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="outerwear" data-gender="kids" onclick="openModal('Kids Pullover Hoodie','Kids','80% Cotton 20% Polyester · French terry · GSM 280 · Kangaroo pocket','Outerwear','MOQ 1000,Kids Sizing,Custom Print,Kangaroo Pocket,2–14 yrs')"><div class="pimg"><div class="pph"><span>Kids Pullover Hoodie</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Pullover Hoodie</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · French terry · GSM 280</p><div class="ptags"><span class="ptag">2–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="outerwear" data-gender="kids" onclick="openModal('Kids Zip-Up Hoodie','Kids','80% Cotton 20% Polyester · French terry · GSM 280 · Full zip · Side pockets','Outerwear','MOQ 1000,Kids Sizing,Full Zip,Custom Colour,2–14 yrs')"><div class="pimg"><div class="pph"><span>Kids Zip-Up Hoodie</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Zip-Up Hoodie</div><p class="pmat"><strong>Material:</strong> 80% Cotton 20% Poly · French terry · GSM 280</p><div class="ptags"><span class="ptag">2–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Shrinkage tested to under 3% on all cotton outerwear. <span>Size runs stay consistent across the bulk.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- WORKWEAR -->
+<div class="cs" id="workwear">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 06</div><div class="cs-name">Workwear</div><p class="cs-desc">Corporate, industrial, healthcare, and hospitality uniforms. Custom logo, branding, and safety standards available.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('workwear','all',this)">All</button>
+    <button class="ftab" onclick="filter('workwear','men',this)">Men</button>
+    <button class="ftab" onclick="filter('workwear','women',this)">Women</button>
+    <button class="ftab" onclick="filter('workwear','unisex',this)">Unisex</button>
+  </div>
+  <div class="pgrid" id="grid-workwear">
+    <div class="pcard" data-cat="workwear" data-gender="unisex" onclick="openModal('Corporate Polo Shirt','Unisex','95% Cotton 5% Elastane · Pique knit · GSM 220 · Custom embroidery · 3-button placket','Workwear','MOQ 1000,Custom Embroidery,Pique Knit,3-Button Placket,XS–4XL')"><div class="pimg"><div class="pph"><span>Corporate Polo Shirt</span></div><span class="pbadge">Workwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Corporate Polo Shirt</div><p class="pmat"><strong>Material:</strong> 95% Cotton 5% Elastane · Pique knit · GSM 220</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="men" onclick="openModal('Work Shirt — Long Sleeve','Men','100% Cotton twill · GSM 120 · Chest pockets · Custom logo · Button-down collar','Workwear','MOQ 1000,Custom Logo,Chest Pockets,Button-Down Collar,S–4XL')"><div class="pimg"><div class="pph"><span>Work Shirt Long Sleeve</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Work Shirt — Long Sleeve</div><p class="pmat"><strong>Material:</strong> 100% Cotton Twill · GSM 120 · Chest pockets</p><div class="ptags"><span class="ptag">S–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="men" onclick="openModal('Cargo Work Trousers','Men','65% Polyester 35% Cotton · Twill · GSM 270 · Knee pads option · Multi-pocket','Workwear','MOQ 1000,Multi-Pocket,Knee Pad Option,Custom Colour,S–4XL')"><div class="pimg"><div class="pph"><span>Cargo Work Trousers</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Cargo Work Trousers</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · Twill · GSM 270 · Multi-pocket</p><div class="ptags"><span class="ptag">S–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="unisex" onclick="openModal('Hi-Vis Safety Vest','Unisex','100% Polyester mesh · EN ISO 20471 Class 2 · 2 silver reflective bands · Zip front','Workwear','MOQ 1000,EN ISO 20471,Reflective Bands,Zip Front,XS–4XL')"><div class="pimg"><div class="pph"><span>Hi-Vis Safety Vest</span></div><span class="pbadge">Workwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Hi-Vis Safety Vest</div><p class="pmat"><strong>Material:</strong> 100% Poly Mesh · EN ISO 20471 Class 2</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">EN ISO 20471</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="unisex" onclick="openModal('Hi-Vis Jacket — Waterproof','Unisex','EN ISO 20471 Class 3 · Waterproof PU coating · Taped seams · Reflective bands','Workwear','MOQ 1000,EN ISO 20471 Class 3,Waterproof,Taped Seams,XS–4XL')"><div class="pimg"><div class="pph"><span>Hi-Vis Waterproof Jacket</span></div><span class="pbadge">Workwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Hi-Vis Jacket — Waterproof</div><p class="pmat"><strong>Material:</strong> EN ISO 20471 Class 3 · PU coating · Taped seams</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">Class 3</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="unisex" onclick="openModal('Healthcare Scrub Top','Unisex','65% Polyester 35% Cotton · GSM 195 · V-neck · Chest pocket · Anti-wrinkle','Workwear','MOQ 1000,V-Neck,Anti-Wrinkle,Custom Colour,XS–4XL')"><div class="pimg"><div class="pph"><span>Healthcare Scrub Top</span></div><span class="pbadge">Workwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Healthcare Scrub Top</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 195 · V-neck</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="unisex" onclick="openModal('Healthcare Scrub Trousers','Unisex','65% Polyester 35% Cotton · GSM 195 · Drawstring waist · Side pockets','Workwear','MOQ 1000,Drawstring Waist,Side Pockets,Custom Colour,XS–4XL')"><div class="pimg"><div class="pph"><span>Healthcare Scrub Trousers</span></div><span class="pbadge">Workwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Healthcare Scrub Trousers</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 195 · Drawstring waist</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="unisex" onclick="openModal('Chef Jacket — Short Sleeve','Unisex','100% Cotton · GSM 200 · Double-breasted · Mesh ventilation · Stain resistant','Workwear','MOQ 1000,Double-Breasted,Stain Resistant,Custom Logo,XS–4XL')"><div class="pimg"><div class="pph"><span>Chef Jacket Short Sleeve</span></div><span class="pbadge">Workwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Chef Jacket — Short Sleeve</div><p class="pmat"><strong>Material:</strong> 100% Cotton · GSM 200 · Double-breasted</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="unisex" onclick="openModal('Boilersuit / Overall','Unisex','65% Polyester 35% Cotton · GSM 240 · Full zip · Multiple pockets · Knee reinforcement','Workwear','MOQ 1000,Full Zip,Multiple Pockets,Knee Reinforcement,S–4XL')"><div class="pimg"><div class="pph"><span>Boilersuit Overall</span></div><span class="pbadge">Workwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Boilersuit / Overall</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 240 · Full zip</p><div class="ptags"><span class="ptag">S–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="workwear" data-gender="women" onclick="openModal('Corporate Blouse — Women','Women','65% Polyester 35% Cotton · GSM 110 · Relaxed fit · Custom logo · Concealed placket','Workwear','MOQ 1000,Custom Logo,Relaxed Fit,Concealed Placket,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Corporate Blouse</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Corporate Blouse — Women</div><p class="pmat"><strong>Material:</strong> 65% Poly 35% Cotton · GSM 110 · Relaxed fit</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Corporate uniform programmes? <span>We supply full matching sets — shirts, trousers, and outerwear in one order.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- RAINWEAR -->
+<div class="cs" id="rainwear">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 07</div><div class="cs-name">Rainwear</div><p class="cs-desc">Waterproof jackets, ponchos, shell suits, and rain trousers. Taped seams, breathable membranes. Kids sizes available.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('rainwear','all',this)">All</button>
+    <button class="ftab" onclick="filter('rainwear','men',this)">Men</button>
+    <button class="ftab" onclick="filter('rainwear','women',this)">Women</button>
+    <button class="ftab" onclick="filter('rainwear','unisex',this)">Unisex</button>
+    <button class="ftab" onclick="filter('rainwear','kids',this)">Kids</button>
+  </div>
+  <div class="pgrid" id="grid-rainwear">
+    <div class="pcard" data-cat="rainwear" data-gender="unisex" onclick="openModal('Waterproof Shell Jacket — 2.5L','Unisex','100% Polyester · PU coated · HH 5000mm · Fully taped seams · Packable','Rainwear','MOQ 1000,HH 5000mm,Taped Seams,Packable,XS–4XL')"><div class="pimg"><div class="pph"><span>Waterproof Shell Jacket 2.5L</span></div><span class="pbadge">Rainwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Waterproof Shell Jacket — 2.5L</div><p class="pmat"><strong>Material:</strong> 100% Polyester · PU coated · HH 5000mm</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">Taped Seams</span></div></div></div>
+    <div class="pcard" data-cat="rainwear" data-gender="unisex" onclick="openModal('Waterproof Shell Jacket — 3L','Unisex','100% Polyester · 3-layer bonded · HH 10000mm · Breathable 8000g/m2 · Taped seams','Rainwear','MOQ 1000,HH 10000mm,3-Layer,Breathable,XS–4XL')"><div class="pimg"><div class="pph"><span>Waterproof Shell Jacket 3L</span></div><span class="pbadge">Rainwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Waterproof Shell Jacket — 3L</div><p class="pmat"><strong>Material:</strong> 3-layer bonded · HH 10000mm · Breathable 8000g</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">3-Layer</span></div></div></div>
+    <div class="pcard" data-cat="rainwear" data-gender="unisex" onclick="openModal('Rain Poncho — Packable','Unisex','100% Polyester · PU coated · HH 3000mm · Hood · Packs into own pocket','Rainwear','MOQ 1000,HH 3000mm,Packable,Hooded,One Size')"><div class="pimg"><div class="pph"><span>Rain Poncho Packable</span></div><span class="pbadge">Rainwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Rain Poncho — Packable</div><p class="pmat"><strong>Material:</strong> 100% Polyester · PU coated · HH 3000mm</p><div class="ptags"><span class="ptag">One Size</span><span class="ptag">MOQ 1,000</span><span class="ptag">Packable</span></div></div></div>
+    <div class="pcard" data-cat="rainwear" data-gender="unisex" onclick="openModal('Cagoule — Lightweight','Unisex','100% Polyester · PU coated · HH 2000mm · Half zip · Packable into pocket','Rainwear','MOQ 1000,Half Zip,Packable,Lightweight,XS–3XL')"><div class="pimg"><div class="pph"><span>Cagoule Lightweight</span></div><span class="pbadge">Rainwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Cagoule — Lightweight</div><p class="pmat"><strong>Material:</strong> 100% Polyester · PU coated · HH 2000mm</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="rainwear" data-gender="unisex" onclick="openModal('Rain Trousers — Taped','Unisex','100% Polyester · PU coated · HH 5000mm · Taped seams · Ankle zip · Elasticated waist','Rainwear','MOQ 1000,HH 5000mm,Taped Seams,Ankle Zip,S–4XL')"><div class="pimg"><div class="pph"><span>Rain Trousers Taped</span></div><span class="pbadge">Rainwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Rain Trousers — Taped Seams</div><p class="pmat"><strong>Material:</strong> 100% Polyester · PU coated · HH 5000mm</p><div class="ptags"><span class="ptag">S–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="rainwear" data-gender="women" onclick="openModal('Women Waterproof Jacket — Fitted','Women','100% Polyester · PU coated · HH 5000mm · Fitted cut · Taped seams · Hood','Rainwear','MOQ 1000,HH 5000mm,Fitted Cut,Taped Seams,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Waterproof Jacket Fitted</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Waterproof Jacket — Fitted</div><p class="pmat"><strong>Material:</strong> 100% Polyester · PU coated · HH 5000mm</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="rainwear" data-gender="kids" onclick="openModal('Kids Waterproof Jacket','Kids','100% Polyester · PU coated · HH 3000mm · Hood · Reflective strips · Taped seams','Rainwear','MOQ 1000,HH 3000mm,Reflective Strips,Kids Sizing,2–14 yrs')"><div class="pimg"><div class="pph"><span>Kids Waterproof Jacket</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Waterproof Jacket</div><p class="pmat"><strong>Material:</strong> 100% Polyester · PU coated · HH 3000mm</p><div class="ptags"><span class="ptag">2–14 yrs</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="rainwear" data-gender="kids" onclick="openModal('Kids Rain Suit Set','Kids','100% Polyester · PU coated · HH 3000mm · Jacket + trousers set · Taped seams','Rainwear','MOQ 1000,Full Rain Suit,Kids Sizing,Taped Seams,2–14 yrs')"><div class="pimg"><div class="pph"><span>Kids Rain Suit Set</span></div><span class="pbadge">Kids</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Kids Rain Suit Set</div><p class="pmat"><strong>Material:</strong> 100% Polyester · PU coated · Jacket + trousers</p><div class="ptags"><span class="ptag">2–14 yrs</span><span class="ptag">MOQ 1,000</span><span class="ptag">Full Set</span></div></div></div>
+  </div>
+  <div class="scta"><p>Waterproofing tested to HH rating before bulk shipment. <span>All seams taped and verified on final inspection.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- LINGERIE -->
+<div class="cs" id="lingerie">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 08</div><div class="cs-name">Lingerie & Intimate Apparel</div><p class="cs-desc">Bras, briefs, bralettes, bodysuits, chemises, and loungewear. OEKO-TEX certified. XS to plus-size grading.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="ftabs">
+    <button class="ftab active" onclick="filter('lingerie','all',this)">All</button>
+    <button class="ftab" onclick="filter('lingerie','women',this)">Women</button>
+    <button class="ftab" onclick="filter('lingerie','men',this)">Men</button>
+  </div>
+  <div class="pgrid" id="grid-lingerie">
+    <div class="pcard" data-cat="lingerie" data-gender="women" onclick="openModal('Underwired Bra','Women','82% Polyamide 18% Elastane · Lace overlay · Underwire · Removable pads · Custom colour','Lingerie','MOQ 1000,Underwire,Removable Pads,Lace Overlay,Custom Colour,30A–44F')"><div class="pimg"><div class="pph"><span>Women Underwired Bra</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Underwired Bra</div><p class="pmat"><strong>Material:</strong> 82% Polyamide 18% Elastane · Lace overlay</p><div class="ptags"><span class="ptag">30A–44F</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="women" onclick="openModal('Bralette — Soft Cup','Women','90% Modal 10% Elastane · Soft cup · No wire · Lace trim · Spaghetti straps','Lingerie','MOQ 1000,Soft Cup,No Wire,Lace Trim,XS–XL')"><div class="pimg"><div class="pph"><span>Women Bralette Soft Cup</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Bralette — Soft Cup</div><p class="pmat"><strong>Material:</strong> 90% Modal 10% Elastane · Soft cup · No wire</p><div class="ptags"><span class="ptag">XS–XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="women" onclick="openModal('Brief — Classic','Women','80% Polyamide 20% Elastane · Microfibre · Mid-rise · Full coverage','Lingerie','MOQ 1000,Mid-Rise,Full Coverage,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Brief Classic</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Brief — Classic Mid-Rise</div><p class="pmat"><strong>Material:</strong> 80% Polyamide 20% Elastane · Microfibre</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="women" onclick="openModal('Thong','Women','80% Polyamide 20% Elastane · Microfibre · Low-rise · Lace back panel optional','Lingerie','MOQ 1000,Low-Rise,Lace Back Option,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Thong</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Thong</div><p class="pmat"><strong>Material:</strong> 80% Polyamide 20% Elastane · Microfibre</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="women" onclick="openModal('Bodysuit — Lace','Women','75% Polyamide 25% Elastane · Lace construction · Thong or brief back · Snap closure','Lingerie','MOQ 1000,Lace Construction,Snap Closure,Brief or Thong Back,XS–2XL')"><div class="pimg"><div class="pph"><span>Women Bodysuit Lace</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Bodysuit — Lace</div><p class="pmat"><strong>Material:</strong> 75% Polyamide 25% Elastane · Lace · Snap closure</p><div class="ptags"><span class="ptag">XS–2XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="women" onclick="openModal('Chemise / Slip Dress','Women','95% Modal 5% Elastane · GSM 130 · Satin finish option · Lace trim · Spaghetti straps','Lingerie','MOQ 1000,Modal,Satin Option,Lace Trim,XS–2XL')"><div class="pimg"><div class="pph"><span>Women Chemise Slip Dress</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Chemise / Slip Dress</div><p class="pmat"><strong>Material:</strong> 95% Modal 5% Elastane · GSM 130 · Satin option</p><div class="ptags"><span class="ptag">XS–2XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="women" onclick="openModal('Lounge Set — Bralette + Short','Women','95% Modal 5% Elastane · GSM 155 · Matching co-ord · Ultra-soft · Custom colour','Lingerie','MOQ 1000,Modal,Ultra-Soft,Matching Set,XS–2XL')"><div class="pimg"><div class="pph"><span>Women Lounge Set</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Lounge Set — Bralette + Short</div><p class="pmat"><strong>Material:</strong> 95% Modal 5% Elastane · GSM 155 · Ultra-soft</p><div class="ptags"><span class="ptag">XS–2XL</span><span class="ptag">MOQ 1,000</span><span class="ptag">Modal</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="men" onclick="openModal('Men Boxer Brief','Men','92% Modal 8% Elastane · Flat seams · Pouch support · No-roll waistband','Lingerie','MOQ 1000,Modal,Flat Seams,Pouch Support,S–3XL')"><div class="pimg"><div class="pph"><span>Men Boxer Brief</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Boxer Brief</div><p class="pmat"><strong>Material:</strong> 92% Modal 8% Elastane · Flat seams · Pouch support</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="lingerie" data-gender="men" onclick="openModal('Men Trunk Brief','Men','80% Polyamide 20% Elastane · Microfibre · Low-rise trunk · No ride-up','Lingerie','MOQ 1000,Microfibre,Low-Rise,No Ride-Up,S–3XL')"><div class="pimg"><div class="pph"><span>Men Trunk Brief</span></div><span class="pbadge">Men</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Trunk Brief</div><p class="pmat"><strong>Material:</strong> 80% Polyamide 20% Elastane · Microfibre · Low-rise</p><div class="ptags"><span class="ptag">S–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>OEKO-TEX certified fabrics standard on all lingerie. <span>Plus-size grading XS–5XL available. Private label packaging included.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- KNITWEAR -->
+<div class="cs" id="knitwear">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 09</div><div class="cs-name">Knitwear</div><p class="cs-desc">Sweaters, cardigans, polo shirts, knit co-ords. Fully fashioned, cut and sew, flat knit available.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="pgrid" id="grid-knitwear">
+    <div class="pcard" data-cat="knitwear" data-gender="unisex" onclick="openModal('Crew Neck Sweater','Unisex','100% Cotton · 12GG flat knit · Custom colour · Fully fashioned','Knitwear','MOQ 1000,Fully Fashioned,12GG,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Crew Neck Sweater</span></div><span class="pbadge">Knitwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Crew Neck Sweater</div><p class="pmat"><strong>Material:</strong> 100% Cotton · 12GG flat knit · Fully fashioned</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="knitwear" data-gender="unisex" onclick="openModal('Polo Shirt — Pique Knit','Unisex','95% Cotton 5% Elastane · Pique knit · GSM 220 · 3-button placket','Knitwear','MOQ 1000,Pique Knit,Custom Embroidery,3-Button,XS–4XL')"><div class="pimg"><div class="pph"><span>Polo Shirt Pique</span></div><span class="pbadge">Knitwear</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Polo Shirt — Pique Knit</div><p class="pmat"><strong>Material:</strong> 95% Cotton 5% Elastane · Pique knit · GSM 220</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="knitwear" data-gender="women" onclick="openModal('Open Knit Cardigan','Women','100% Cotton · 10GG open knit · Button front · Drop shoulder','Knitwear','MOQ 1000,Open Knit,Button Front,Drop Shoulder,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Open Knit Cardigan</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Open Knit Cardigan — Women</div><p class="pmat"><strong>Material:</strong> 100% Cotton · 10GG open knit · Button front</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Specific yarn, gauge, or stitch pattern? <span>We source to your exact knitwear spec.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- WOVEN -->
+<div class="cs" id="woven">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 10</div><div class="cs-name">Woven</div><p class="cs-desc">Shirts, chinos, trousers, and casual woven garments. Cotton, linen, poplin, and twill fabrics.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="pgrid" id="grid-woven">
+    <div class="pcard" data-cat="woven" data-gender="men" onclick="openModal('Casual Shirt — Short Sleeve','Men','100% Cotton poplin · GSM 110 · Spread collar · Chest pocket','Woven','MOQ 1000,Poplin,Custom Print,Spread Collar,XS–4XL')"><div class="pimg"><div class="pph"><span>Men Casual Shirt Short Sleeve</span></div><span class="pbadge">Woven</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Casual Shirt — Short Sleeve</div><p class="pmat"><strong>Material:</strong> 100% Cotton Poplin · GSM 110 · Spread collar</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="woven" data-gender="men" onclick="openModal('Casual Shirt — Long Sleeve','Men','100% Cotton poplin · GSM 110 · Spread collar · Chest pocket · Button cuffs','Woven','MOQ 1000,Poplin,Button Cuffs,Custom Colour,XS–4XL')"><div class="pimg"><div class="pph"><span>Men Casual Shirt Long Sleeve</span></div><span class="pbadge">Woven</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Casual Shirt — Long Sleeve</div><p class="pmat"><strong>Material:</strong> 100% Cotton Poplin · GSM 110 · Button cuffs</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="woven" data-gender="men" onclick="openModal('Chino Shorts','Men','98% Cotton 2% Elastane · Twill · GSM 240 · Belt loops · Side + back pockets','Woven','MOQ 1000,Twill,Belt Loops,Custom Colour,XS–4XL')"><div class="pimg"><div class="pph"><span>Men Chino Shorts</span></div><span class="pbadge">Woven</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Chino Shorts</div><p class="pmat"><strong>Material:</strong> 98% Cotton 2% Elastane · Twill · GSM 240</p><div class="ptags"><span class="ptag">XS–4XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="woven" data-gender="women" onclick="openModal('Wide Leg Trousers — Linen','Women','55% Linen 45% Cotton · Plain weave · GSM 180 · Elasticated waist','Woven','MOQ 1000,Linen Blend,Elasticated Waist,Custom Colour,XS–3XL')"><div class="pimg"><div class="pph"><span>Women Wide Leg Linen Trousers</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Wide Leg Trousers — Linen</div><p class="pmat"><strong>Material:</strong> 55% Linen 45% Cotton · GSM 180 · Elasticated waist</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Shirting, suiting, or resort wear? <span>We source across the full woven garment range.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- DENIM -->
+<div class="cs" id="denim">
+  <div class="cs-hdr">
+    <div><div class="csey">Category 11</div><div class="cs-name">Denim</div><p class="cs-desc">Jeans, jackets, shorts. 100% cotton, stretch denim. All washes and finishing available from partner laundries.</p></div>
+    <a href="index.html#rfq" class="cs-btn">Request This Category</a>
+  </div>
+  <div class="pgrid" id="grid-denim">
+    <div class="pcard" data-cat="denim" data-gender="men" onclick="openModal('Slim Fit Jeans','Men','98% Cotton 2% Elastane · 10.5oz · Slim fit · 5-pocket · Custom wash','Denim','MOQ 1000,Stretch Denim,5-Pocket,Custom Wash,28–42W')"><div class="pimg"><div class="pph"><span>Men Slim Fit Jeans</span></div><span class="pbadge">Denim</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Slim Fit Jeans</div><p class="pmat"><strong>Material:</strong> 98% Cotton 2% Elastane · 10.5oz · Custom wash</p><div class="ptags"><span class="ptag">28–42W</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="denim" data-gender="men" onclick="openModal('Straight Leg Jeans','Men','100% Cotton · 12oz rigid denim · Straight leg · 5-pocket · Custom wash','Denim','MOQ 1000,Rigid Denim,Straight Leg,Custom Wash,28–42W')"><div class="pimg"><div class="pph"><span>Men Straight Leg Jeans</span></div><span class="pbadge">Denim</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Men's Straight Leg Jeans</div><p class="pmat"><strong>Material:</strong> 100% Cotton · 12oz Rigid denim · Straight leg</p><div class="ptags"><span class="ptag">28–42W</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="denim" data-gender="women" onclick="openModal('High Waist Jeans','Women','92% Cotton 6% Polyester 2% Elastane · 11oz · High-rise · Raw hem option','Denim','MOQ 1000,High Rise,Raw Hem Option,Custom Wash,24–40W')"><div class="pimg"><div class="pph"><span>Women High Waist Jeans</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's High Waist Jeans</div><p class="pmat"><strong>Material:</strong> 92% Cotton 6% Poly 2% Elastane · 11oz</p><div class="ptags"><span class="ptag">24–40W</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="denim" data-gender="women" onclick="openModal('Wide Leg Jeans','Women','92% Cotton 6% Polyester 2% Elastane · 11.5oz · Wide leg · High rise','Denim','MOQ 1000,Wide Leg,High Rise,Custom Wash,24–40W')"><div class="pimg"><div class="pph"><span>Women Wide Leg Jeans</span></div><span class="pbadge">Women</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Women's Wide Leg Jeans</div><p class="pmat"><strong>Material:</strong> 92% Cotton 6% Poly 2% Elastane · 11.5oz</p><div class="ptags"><span class="ptag">24–40W</span><span class="ptag">MOQ 1,000</span></div></div></div>
+    <div class="pcard" data-cat="denim" data-gender="unisex" onclick="openModal('Denim Jacket — Trucker','Unisex','100% Cotton · 12oz rigid denim · Trucker style · Custom wash','Denim','MOQ 1000,Rigid Denim,Custom Wash,Private Label,XS–3XL')"><div class="pimg"><div class="pph"><span>Denim Jacket Trucker</span></div><span class="pbadge">Denim</span></div><div class="pov"><button class="pov-btn">View Details</button></div><div class="pbody"><div class="pname">Denim Jacket — Trucker</div><p class="pmat"><strong>Material:</strong> 100% Cotton · 12oz Rigid denim · Custom wash</p><div class="ptags"><span class="ptag">XS–3XL</span><span class="ptag">MOQ 1,000</span></div></div></div>
+  </div>
+  <div class="scta"><p>Stone wash, acid wash, sandblast, enzyme wash — <span>all finishing from our partner laundries.</span></p><a href="index.html#rfq">Request Quote</a></div>
+</div>
+
+<!-- HOME TEXTILE CTA -->
+<div class="htcta">
+  <div>
+    <div style="font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Also Available</div>
+    <h3 style="font-family:var(--fd);font-size:1.75rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:7px">Bed Sheets, Pillowcases &amp; Home Textile</h3>
+    <p style="font-size:.84rem;color:rgba(255,255,255,.52);max-width:360px;line-height:1.65">200–1000 TC cotton and blended bedding from certified woven factories. Hotel grade to luxury retail — custom thread counts, sizes, and private label packaging.</p>
+  </div>
+  <a href="bedsheet.html" class="htcta-btn">View Home Textile Range</a>
+</div>
+
+</div></div>
+
+<!-- MODAL -->
+<div class="modal-ov" id="modal" onclick="closeBg(event)">
+  <div class="modal" id="modal-inner">
+    <button class="mcl" onclick="closeModal()">x</button>
+    <div class="modal-img"><div class="pph" id="modal-ph"><span id="modal-ilab">Product Image</span></div></div>
+    <div class="modal-body">
+      <div class="mey" id="modal-cat">Category</div>
+      <div class="mname" id="modal-name">Product Name</div>
+      <div class="mdiv"></div>
+      <div class="mrow"><label>Gender / Target</label><span id="modal-gender">—</span></div>
+      <div class="mrow"><label>Material &amp; Construction</label><span id="modal-mat">—</span></div>
+      <div class="mrow"><label>Available Options</label><div class="mtags" id="modal-tags"></div></div>
+      <div class="mrow"><label>Minimum Order Quantity</label><span>1,000 pieces per style per colour</span></div>
+      <div class="mrow"><label>Lead Time</label><span>45–60 days from approved sample</span></div>
+      <div class="mrow"><label>Quote Turnaround</label><span>Within 48 hours of enquiry</span></div>
+      <a href="index.html#rfq" class="mrfq">Request a Quote for This Product</a>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="con">
+    <div class="fg5">
+      <div><div class="fn">UPNS Apparel</div><div class="fsub">🇧🇩 Garment Sourcing · Bangladesh</div><p class="fd4">Gymwear, sportswear, athleisure, workwear, rainwear, lingerie, knitwear, woven, denim, and home textile — certified factories, full QC, one point of contact.</p></div>
+      <div><div class="fh">Apparel</div><ul class="fu">
+        <li><a href="#gymwear">Gymwear</a></li><li><a href="#sportswear">Sportswear</a></li>
+        <li><a href="#athleisure">Athleisure</a></li><li><a href="#workwear">Workwear</a></li>
+        <li><a href="#rainwear">Rainwear</a></li><li><a href="#lingerie">Lingerie</a></li>
+        <li><a href="#outerwear">Outerwear</a></li><li><a href="#denim">Denim</a></li>
+      </ul></div>
+      <div><div class="fh">Home Textile</div><ul class="fu">
+        <li><a href="bedsheet.html">Bed Sheets</a></li><li><a href="bedsheet.html">Pillowcases</a></li>
+        <li><a href="bedsheet.html">Duvet Covers</a></li><li><a href="bedsheet.html">Hotel Linen</a></li>
+      </ul></div>
+      <div><div class="fh">Company</div><ul class="fu">
+        <li><a href="index.html">Home</a></li><li><a href="index.html#why">Why UPNS</a></li>
+        <li><a href="index.html#process">How It Works</a></li><li><a href="index.html#quality">Quality</a></li>
+        <li><a href="index.html#rfq">Get a Quote</a></li>
+        <li><a href="https://wa.me/8801864210252">WhatsApp Us</a></li>
+      </ul></div>
+    </div>
+    <div class="fb"><span>© 2025 UPNS Apparel. All rights reserved.</span><span>sourcing.upnsapparel@gmail.com</span></div>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('mob').classList.toggle('open')}
+const secs=['knitwear','woven','denim','outerwear','workwear','gymwear','activewear','sportswear','rainwear','lingerie'];
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<180)cur=id});
+  document.querySelectorAll('.ctab').forEach((t,i)=>{if(i<secs.length)t.classList.toggle('active',secs[i]===cur)});
+},{passive:true});
+function goTo(id,btn){
+  document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+}
+function filter(cat,gender,btn){
+  document.getElementById('grid-'+cat)?.querySelectorAll('.pcard').forEach(c=>{
+    c.classList.toggle('hidden',gender!=='all'&&c.dataset.gender!==gender);
+  });
+  btn.closest('.ftabs').querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function openModal(name,gender,mat,cat,tagsStr){
+  document.getElementById('modal-name').textContent=name;
+  document.getElementById('modal-gender').textContent=gender;
+  document.getElementById('modal-mat').textContent=mat;
+  document.getElementById('modal-cat').textContent=cat;
+  document.getElementById('modal-ilab').textContent=name;
+  const tags=document.getElementById('modal-tags');
+  tags.innerHTML=tagsStr.split(',').map(t=>`<span class="ptag">${t.trim()}</span>`).join('');
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
+function closeBg(e){if(e.target.id==='modal')closeModal()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()})
+</script>
+</body>
+</html>
